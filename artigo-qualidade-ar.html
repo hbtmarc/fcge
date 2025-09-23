@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | FC Gestão Estratégica</title>
-    <meta name="description" content="Artigos, notícias e insights sobre o universo do licenciamento ambiental, dispersão atmosférica e gestão estratégica de projetos.">
+    <title>A importância do Monitoramento da Qualidade do Ar | Blog | FC Gestão Estratégica</title>
+    <meta name="description" content="Entenda por que o monitoramento da qualidade do ar vai além da conformidade legal, sendo uma ferramenta estratégica para a saúde pública e a sustentabilidade corporativa.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,9 +14,6 @@
     <style>
         :root { --brand-blue: #0055A4; --brand-green: #6EBE44; }
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: #F8FAFC; }
-        .animated-item { opacity: 0; transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
-        .fade-in { transform: translateY(70px); }
-        .animated-item.is-visible { opacity: 1; transform: translate(0, 0); }
         .gradient-text-hover { position: relative; text-decoration: none; display: inline-block; }
         .gradient-text-hover::after { content: ''; position: absolute; width: 100%; height: 2px; bottom: -4px; left: 0; background: linear-gradient(90deg, var(--brand-blue), var(--brand-green)); transform: scaleX(0); transform-origin: bottom right; transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1); }
         .gradient-text-hover:hover::after { transform: scaleX(1); transform-origin: bottom left; }
@@ -26,12 +23,12 @@
         .cta-button-standard { background-color: var(--brand-blue); }
         .cta-button-standard::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, var(--brand-green), var(--brand-blue), var(--brand-green)); background-size: 250% 250%; z-index: -1; transition: opacity 0.4s ease-in-out; opacity: 0; }
         .cta-button-standard:hover::before { opacity: 1; animation: gradient-loop 4s ease infinite; }
-        .page-header { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
-        .post-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .post-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0, 85, 164, 0.1); }
+        .prose h2 { font-size: 1.5em; font-weight: 700; margin-top: 2em; margin-bottom: 1em; }
+        .prose p { margin-bottom: 1.25em; line-height: 1.7; }
+        .prose blockquote { border-left: 4px solid var(--brand-blue); padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: #475569; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-700">
+<body class="bg-white text-slate-700">
 
     <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 border-b border-slate-200">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
@@ -48,7 +45,6 @@
             </div>
             <div class="md:hidden"><button id="mobile-menu-button" class="text-slate-800"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
         </nav>
-        <!-- Menu Mobile -->
         <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-sm fixed top-0 left-0 h-full w-64 z-50 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out">
             <div class="p-6">
                 <a href="index.html" class="shrink-0 mb-8 inline-block"><img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto"></a>
@@ -63,49 +59,41 @@
     </header>
 
     <main>
-        <section class="relative page-header text-center py-24 sm:py-32" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-slate-900/60 z-0"></div>
-            <div class="relative z-10 container mx-auto px-6 animated-item fade-in">
-                <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-white">Nosso Blog</h1>
-                <p class="mt-4 text-lg text-slate-200 max-w-2xl mx-auto">Conteúdo relevante para manter você atualizado sobre as últimas tendências e regulamentações do setor ambiental.</p>
-            </div>
-        </section>
+        <article class="py-12 sm:py-20">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <header class="text-center mb-12">
+                    <a href="blog.html" class="text-sm font-semibold text-[--brand-blue] hover:underline">← Voltar para o Blog</a>
+                    <h1 class="text-3xl md:text-5xl font-black tracking-tighter text-slate-900 mt-4">A importância do Monitoramento da Qualidade do Ar</h1>
+                    <p class="mt-4 text-slate-500">Publicado em 21 de Agosto, 2025 • Categoria: Sustentabilidade</p>
+                </header>
 
-        <section class="py-20 sm:py-28 animated-item fade-in">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Artigo 1 -->
-                    <a href="artigo-aermod.html" class="post-card bg-white rounded-lg shadow-md overflow-hidden block">
-                        <img src="https://images.unsplash.com/photo-1555431182-0a0f54b69a23?q=80&w=2070&auto=format&fit=crop" alt="Artigo sobre AERMOD" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <p class="text-sm text-slate-500">Modelagem • 15 de Setembro, 2025</p>
-                            <h3 class="mt-2 text-xl font-bold text-slate-900">Desvendando o AERMOD: O que você precisa saber</h3>
-                            <p class="mt-2 text-slate-600">Um guia completo sobre o modelo de dispersão mais utilizado no mundo e sua importância para o licenciamento.</p>
-                        </div>
-                    </a>
-                    <!-- Artigo 2 -->
-                    <a href="artigo-cetesb.html" class="post-card bg-white rounded-lg shadow-md overflow-hidden block">
-                        <img src="https://images.unsplash.com/photo-1518625381749-d716881261a8?q=80&w=1964&auto=format&fit=crop" alt="Artigo sobre CETESB" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <p class="text-sm text-slate-500">Legislação • 02 de Setembro, 2025</p>
-                            <h3 class="mt-2 text-xl font-bold text-slate-900">Novas diretrizes da CETESB para 2025: Esteja preparado</h3>
-                            <p class="mt-2 text-slate-600">Analisamos as principais mudanças na legislação ambiental de São Paulo e o que elas significam para o seu negócio.</p>
-                        </div>
-                    </a>
-                    <!-- Artigo 3 -->
-                    <a href="artigo-qualidade-ar.html" class="post-card bg-white rounded-lg shadow-md overflow-hidden block">
-                        <img src="https://images.unsplash.com/photo-1622356393088-e21f5a5e378c?q=80&w=2070&auto=format&fit=crop" alt="Artigo sobre qualidade do ar" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <p class="text-sm text-slate-500">Sustentabilidade • 21 de Agosto, 2025</p>
-                            <h3 class="mt-2 text-xl font-bold text-slate-900">A importância do Monitoramento da Qualidade do Ar</h3>
-                            <p class="mt-2 text-slate-600">Além da conformidade legal, o monitoramento contínuo é uma ferramenta estratégica para a saúde e sustentabilidade.</p>
-                        </div>
-                    </a>
-                    <!-- Adicionar mais posts aqui -->
+                <img src="https://images.unsplash.com/photo-1622356393088-e21f5a5e378c?q=80&w=2070&auto=format&fit=crop" alt="Imagem principal do artigo sobre qualidade do ar" class="w-full h-auto max-h-[500px] object-cover rounded-lg shadow-lg mb-12">
+
+                <div class="prose max-w-none text-lg text-slate-700">
+                    <p>Muitas vezes visto apenas como uma obrigação dentro do processo de licenciamento ambiental, o <strong>Monitoramento da Qualidade do Ar (PMQAr)</strong> é, na verdade, uma ferramenta estratégica com implicações profundas para a saúde pública, a reputação corporativa e a sustentabilidade a longo prazo de qualquer empreendimento. Ir além do básico e entender o seu verdadeiro valor pode transformar a maneira como uma empresa encara suas responsabilidades ambientais.</p>
+                    
+                    <p>O ar que respiramos é um recurso compartilhado e vital. A poluição atmosférica é um dos maiores riscos ambientais para a saúde humana, associada a uma série de doenças respiratórias e cardiovasculares. Para as indústrias, monitorar o que emitem não é apenas sobre seguir regras; é sobre ser um bom vizinho e um ator responsável na comunidade onde opera.</p>
+
+                    <h2>Mais do que dados: inteligência para a gestão</h2>
+                    <p>Um Plano de Monitoramento da Qualidade do Ar bem estruturado fornece dados contínuos e confiáveis sobre as concentrações de poluentes na área de influência de um projeto. Essa informação é valiosa e vai muito além de simplesmente preencher relatórios para os órgãos ambientais. Com esses dados, uma empresa pode:</p>
+                    <ul>
+                        <li><strong>Verificar a eficácia de sistemas de controle:</strong> O monitoramento comprova se os investimentos em filtros e outras tecnologias de abatimento estão realmente funcionando como esperado.</li>
+                        <li><strong>Identificar problemas operacionais:</strong> Picos inesperados nas concentrações de poluentes podem indicar falhas em processos ou equipamentos, permitindo uma manutenção proativa.</li>
+                        <li><strong>Otimizar a produção:</strong> Em alguns casos, os dados podem ajudar a correlacionar certas condições operacionais com maiores emissões, abrindo caminho para otimizações que reduzem tanto a poluição quanto os custos.</li>
+                        <li><strong>Fortalecer o relacionamento com a comunidade:</strong> A transparência na divulgação dos dados de qualidade do ar pode construir confiança e demonstrar um compromisso genuíno com o bem-estar local.</li>
+                    </ul>
+
+                    <blockquote>
+                        "O monitoramento da qualidade do ar transforma o abstrato em concreto. Ele nos dá um retrato fiel do nosso impacto e a inteligência necessária para gerenciá-lo de forma eficaz e responsável."
+                    </blockquote>
+
+                    <h2>Construindo um futuro mais limpo</h2>
+                    <p>Implementar um PMQAr não precisa ser um processo oneroso ou complicado. Com o parceiro certo, é possível desenhar um plano que seja ao mesmo tempo robusto cientificamente e adequado à realidade operacional da empresa. Desde a escolha dos equipamentos e locais de amostragem até a análise e interpretação dos dados, cada passo é crucial para garantir que o programa gere valor.</p>
+
+                    <p>Investir no monitoramento da qualidade do ar é investir no futuro. É uma demonstração de que a empresa não apenas cumpre a lei, mas também lidera pelo exemplo, pavimentando o caminho para um desenvolvimento industrial que seja verdadeiramente sustentável.</p>
                 </div>
             </div>
-        </section>
-
+        </article>
     </main>
 
     <footer class="bg-white border-t border-slate-200">
@@ -117,21 +105,6 @@
     
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-             const animationObserver = new IntersectionObserver(entries => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
-            }, { 
-                threshold: 0.15,
-                rootMargin: "0px 0px -50px 0px"
-            });
-
-            document.querySelectorAll('.animated-item').forEach(item => {
-                animationObserver.observe(item);
-            });
-
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const closeMobileMenuButton = document.getElementById('close-mobile-menu');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -145,4 +118,3 @@
     </script>
 </body>
 </html>
-

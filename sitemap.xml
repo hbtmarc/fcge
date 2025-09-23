@@ -6,29 +6,45 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://www.fcgestaoestrategica.com.br/</loc>
-  <lastmod>2024-07-25T15:00:00+00:00</lastmod>
+  <loc>https://hbtmarc.github.io/fcge/</loc>
+  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.fcgestaoestrategica.com.br/servicos.html</loc>
-  <lastmod>2024-07-25T15:00:00+00:00</lastmod>
+  <loc>https://hbtmarc.github.io/fcge/servicos.html</loc>
+  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.fcgestaoestrategica.com.br/sobre.html</loc>
-  <lastmod>2024-07-25T15:00:00+00:00</lastmod>
+  <loc>https://hbtmarc.github.io/fcge/sobre.html</loc>
+  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.fcgestaoestrategica.com.br/contato.html</loc>
-  <lastmod>2024-07-25T15:00:00+00:00</lastmod>
+  <loc>https://hbtmarc.github.io/fcge/contato.html</loc>
+  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.fcgestaoestrategica.com.br/blog.html</loc>
-  <lastmod>2024-07-25T15:00:00+00:00</lastmod>
+  <loc>https://hbtmarc.github.io/fcge/blog.html</loc>
+  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
   <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://hbtmarc.github.io/fcge/artigo-aermod.html</loc>
+  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://hbtmarc.github.io/fcge/artigo-cetesb.html</loc>
+  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://hbtmarc.github.io/fcge/artigo-qualidade-ar.html</loc>
+  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
+  <priority>0.60</priority>
 </url>
 
 </urlset>
+
