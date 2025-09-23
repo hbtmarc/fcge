@@ -4,9 +4,9 @@
 <p>Revitalização completa do site institucional com foco em <strong>performance</strong>, <strong>SEO</strong> e uma <strong>experiência de usuário (UX)</strong> de alto nível.</p>
 
 <p>
-<img src="https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen%3Fstyle%3Dfor-the-badge" alt="Status: Concluído">
-<img src="https://img.shields.io/badge/Vers%C3%A3o-2.0.0-blue%3Fstyle%3Dfor-the-badge" alt="Versão 2.0.0">
-<img src="https://img.shields.io/github/license/hbtmarc/fcge%3Fstyle%3Dfor-the-badge%26color%3Dinformational" alt="Licença">
+<a href="https://hbtmarc.github.io/fcge/" alt="Status: Concluído" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">✅</a>
+<a href="https://hbtmarc.github.io/fcge/" alt="Versão 2.0.0" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">⚠️</a>
+<a href="https://hbtmarc.github.io/fcge/" alt="Licença" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">📄</a>
 </p>
 </div>
 
