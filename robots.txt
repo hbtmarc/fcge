@@ -1,0 +1,12 @@
+Allow all user agents to crawl the site
+
+User-agent: *
+Allow: /
+Disallow crawling of any potential admin or sensitive folders
+(Even for static sites, it's good practice)
+
+Disallow: /cgi-bin/
+Disallow: /admin/
+Point to the sitemap file
+
+Sitemap: https://www.google.com/search?q=https://www.fcgestaoestrategica.com.br/sitemap.xml
