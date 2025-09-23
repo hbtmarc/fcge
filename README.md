@@ -19,16 +19,16 @@
 <a href="https://hbtmarc.github.io/fcge/" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🏠<br>Home</a>
 </td>
 <td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
-<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/servicos.html" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🛠️<br>Serviços</a>
+<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/servicos" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🛠️<br>Serviços</a>
 </td>
 <td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
-<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/sobre.html" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🏢<br>Sobre Nós</a>
+<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/sobre" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🏢<br>Sobre Nós</a>
 </td>
 <td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
-<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/contato.html" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">📞<br>Contato</a>
+<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/contato" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">📞<br>Contato</a>
 </td>
 <td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
-<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/blog.html" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">✍️<br>Blog</a>
+<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/blog" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">✍️<br>Blog</a>
 </td>
 </tr>
 </table>
