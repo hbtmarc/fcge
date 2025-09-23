@@ -109,17 +109,6 @@ A escolha tecnológica priorizou a performance, simplicidade e as melhores ferra
 </pre>
 </details>
 
-<details>
-<summary><strong>☁️ Como Fazer o Deploy (Hospedagem)</strong></summary>
-<br>
-A hospedagem deste site é extremamente simples:
-<ol>
-<li>Escolha um provedor de hospedagem de sites estáticos (Netlify, Vercel, GitHub Pages, etc.).</li>
-<li>Faça o upload de todos os arquivos do projeto para a pasta raiz do seu servidor (geralmente <code>public_html</code> ou <code>www</code>).</li>
-</ol>
-O site estará no ar, sem necessidade de configuração de banco de dados ou backend.
-</details>
-
 <div align="center">
 <p>Desenvolvido como parte de um projeto de modernização e reposicionamento estratégico.</p>
 </div>
