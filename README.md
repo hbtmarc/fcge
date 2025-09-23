@@ -4,9 +4,9 @@
 <p>Revitalização completa do site institucional com foco em <strong>performance</strong>, <strong>SEO</strong> e uma <strong>experiência de usuário (UX)</strong> de alto nível.</p>
 
 <p>
-<a href="https://hbtmarc.github.io/fcge/" alt="Status: Concluído" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">✅</a>
-<a href="https://hbtmarc.github.io/fcge/" alt="Versão 2.0.0" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">⚠️</a>
-<a href="https://hbtmarc.github.io/fcge/" alt="Licença" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">📄</a>
+<a href="" alt="Status: Concluído" style="text-decoration: none; font-weight: bold; font-size: 1.1em;">⌛ Em desenvolvimento</a>
+<a href="" alt="Versão 2.0.0" style="text-decoration: none; font-weight: bold; font-size: 1.1em;">⚠️ V1.0.0</a>
+<a href="" alt="Licença" style="text-decoration: none; font-weight: bold; font-size: 1.1em;">📄 Licença</a>
 </p>
 </div>
 
