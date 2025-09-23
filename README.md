@@ -40,9 +40,10 @@
 <a href="https://hbtmarc.github.io/fcge/artigo-qualidade-ar.html" style="margin: 0 10px;">A importância do Monitoramento</a>
 </p>
 </div>
+<p></p>
 📋 Detalhes do Projeto
 <p></p>
-<br><br>
+<br>
 <details>
 <summary><strong>🎯 Objetivos Estratégicos</strong></summary>
 <br>
