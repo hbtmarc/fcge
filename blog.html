@@ -14,6 +14,9 @@
     <style>
         :root { --brand-blue: #0055A4; --brand-green: #6EBE44; }
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: #F8FAFC; }
+        .animated-item { opacity: 0; transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .fade-in { transform: translateY(70px); }
+        .animated-item.is-visible { opacity: 1; transform: translate(0, 0); }
         .gradient-text-hover { position: relative; text-decoration: none; display: inline-block; }
         .gradient-text-hover::after { content: ''; position: absolute; width: 100%; height: 2px; bottom: -4px; left: 0; background: linear-gradient(90deg, var(--brand-blue), var(--brand-green)); transform: scaleX(0); transform-origin: bottom right; transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1); }
         .gradient-text-hover:hover::after { transform: scaleX(1); transform-origin: bottom left; }
@@ -32,53 +35,50 @@
 
     <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 border-b border-slate-200">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="/" class="flex items-center gap-3 shrink-0">
+            <a href="index.html" class="flex items-center gap-3 shrink-0">
                 <img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-14 w-auto">
                 <span class="font-bold text-xl text-slate-800 tracking-tight hidden sm:inline" style="color: var(--brand-blue);">FC Gestão Estratégica</span>
             </a>
             <div class="hidden md:flex items-center space-x-8 font-medium text-slate-800">
                 <a href="sobre.html" class="gradient-text-hover">Sobre</a>
                 <a href="servicos.html" class="gradient-text-hover">Serviços</a>
-                <a href="/#processo" class="gradient-text-hover">Nosso Processo</a>
+                <a href="index.html#processo" class="gradient-text-hover">Nosso Processo</a>
                 <a href="blog.html" class="gradient-text-hover font-bold text-[--brand-blue]">Blog</a>
                 <a href="contato.html" class="text-white font-bold py-2 px-5 rounded-lg cta-button cta-button-standard">Contato</a>
             </div>
             <div class="md:hidden"><button id="mobile-menu-button" class="text-slate-800"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
         </nav>
-        <div id="mobile-menu" class="hidden absolute top-0 left-0 w-full bg-white z-50 shadow-xl">
-             <div class="flex justify-between items-center px-6 py-3 border-b">
-                <a href="/" class="flex items-center gap-3 shrink-0">
-                   <img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto">
-                </a>
-                <button id="close-mobile-menu" class="text-slate-700"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
-            </div>
-            <div class="p-6 flex flex-col space-y-4">
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-sm fixed top-0 left-0 h-full w-64 z-50 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="p-6">
+                <a href="index.html" class="shrink-0 mb-8 inline-block"><img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto"></a>
                 <a href="sobre.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Sobre</a>
                 <a href="servicos.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Serviços</a>
-                <a href="/#processo" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Nosso Processo</a>
-                <a href="blog.html" class="block py-3 text-lg text-[--brand-blue] font-semibold">Blog</a>
+                <a href="index.html#processo" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Nosso Processo</a>
+                <a href="blog.html" class="block py-3 text-lg text-[--brand-blue] font-bold">Blog</a>
                 <a href="contato.html" class="block mt-4 text-lg text-white font-bold py-3 px-6 rounded-lg text-center cta-button cta-button-standard">Contato</a>
             </div>
+            <button id="close-mobile-menu" class="absolute top-6 right-6 text-slate-700"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
         </div>
     </header>
 
     <main>
         <section class="relative page-header text-center py-24 sm:py-32" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop');">
             <div class="absolute inset-0 bg-slate-900/60 z-0"></div>
-            <div class="relative z-10 container mx-auto px-6">
+            <div class="relative z-10 container mx-auto px-6 animated-item fade-in">
                 <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-white">Nosso Blog</h1>
                 <p class="mt-4 text-lg text-slate-200 max-w-2xl mx-auto">Conteúdo relevante para manter você atualizado sobre as últimas tendências e regulamentações do setor ambiental.</p>
             </div>
         </section>
 
-        <section class="py-24 sm:py-32">
+        <section class="py-24 sm:py-32 animated-item fade-in">
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Exemplo de Post 1 -->
                     <a href="#" class="post-card bg-white rounded-lg shadow-md overflow-hidden block">
                         <img src="https://images.unsplash.com/photo-1555431182-0a0f54b69a23?q=80&w=2070&auto=format&fit=crop" alt="Artigo sobre AERMOD" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <p class="text-sm text-slate-500">Modelagem • 15 de Julho, 2024</p>
+                            <p class="text-sm text-slate-500">Modelagem • 15 de Setembro, 2025</p>
                             <h3 class="mt-2 text-xl font-bold text-slate-900">Desvendando o AERMOD: O que você precisa saber</h3>
                             <p class="mt-2 text-slate-600">Um guia completo sobre o modelo de dispersão mais utilizado no mundo e sua importância para o licenciamento.</p>
                         </div>
@@ -87,8 +87,8 @@
                     <a href="#" class="post-card bg-white rounded-lg shadow-md overflow-hidden block">
                         <img src="https://images.unsplash.com/photo-1518625381749-d716881261a8?q=80&w=1964&auto=format&fit=crop" alt="Artigo sobre CETESB" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <p class="text-sm text-slate-500">Legislação • 02 de Julho, 2024</p>
-                            <h3 class="mt-2 text-xl font-bold text-slate-900">Novas diretrizes da CETESB para 2024: Esteja preparado</h3>
+                            <p class="text-sm text-slate-500">Legislação • 02 de Setembro, 2025</p>
+                            <h3 class="mt-2 text-xl font-bold text-slate-900">Novas diretrizes da CETESB para 2025: Esteja preparado</h3>
                             <p class="mt-2 text-slate-600">Analisamos as principais mudanças na legislação ambiental de São Paulo e o que elas significam para o seu negócio.</p>
                         </div>
                     </a>
@@ -96,7 +96,7 @@
                     <a href="#" class="post-card bg-white rounded-lg shadow-md overflow-hidden block">
                         <img src="https://images.unsplash.com/photo-1622356393088-e21f5a5e378c?q=80&w=2070&auto=format&fit=crop" alt="Artigo sobre qualidade do ar" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <p class="text-sm text-slate-500">Sustentabilidade • 21 de Junho, 2024</p>
+                            <p class="text-sm text-slate-500">Sustentabilidade • 21 de Agosto, 2025</p>
                             <h3 class="mt-2 text-xl font-bold text-slate-900">A importância do Monitoramento da Qualidade do Ar</h3>
                             <p class="mt-2 text-slate-600">Além da conformidade legal, o monitoramento contínuo é uma ferramenta estratégica para a saúde e sustentabilidade.</p>
                         </div>
@@ -110,25 +110,39 @@
 
     <footer class="bg-white border-t border-slate-200">
         <div class="container mx-auto px-6 py-8 text-center text-slate-500">
-            <img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto mx-auto mb-4">
+            <a href="index.html"><img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto mx-auto mb-4"></a>
             <p>&copy; 2024 FC Gestão Estratégica. Todos os direitos reservados.</p>
         </div>
     </footer>
     
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+             const animationObserver = new IntersectionObserver(entries => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { 
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.animated-item').forEach(item => {
+                animationObserver.observe(item);
+            });
+
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const closeMobileMenuButton = document.getElementById('close-mobile-menu');
             const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-
-            const openMenu = () => mobileMenu.classList.remove('hidden');
-            const closeMenu = () => mobileMenu.classList.add('hidden');
+            
+            const openMenu = () => mobileMenu.classList.remove('-translate-x-full');
+            const closeMenu = () => mobileMenu.classList.add('-translate-x-full');
 
             if(mobileMenuButton) mobileMenuButton.addEventListener('click', openMenu);
             if(closeMobileMenuButton) closeMobileMenuButton.addEventListener('click', closeMenu);
-            mobileMenuLinks.forEach(link => link.addEventListener('click', closeMenu));
         });
     </script>
 </body>
 </html>
+

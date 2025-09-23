@@ -14,6 +14,9 @@
     <style>
         :root { --brand-blue: #0055A4; --brand-green: #6EBE44; }
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: #F8FAFC; }
+        .animated-item { opacity: 0; transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .fade-in { transform: translateY(70px); }
+        .animated-item.is-visible { opacity: 1; transform: translate(0, 0); }
         .gradient-text-hover { position: relative; text-decoration: none; display: inline-block; }
         .gradient-text-hover::after { content: ''; position: absolute; width: 100%; height: 2px; bottom: -4px; left: 0; background: linear-gradient(90deg, var(--brand-blue), var(--brand-green)); transform: scaleX(0); transform-origin: bottom right; transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1); }
         .gradient-text-hover:hover::after { transform: scaleX(1); transform-origin: bottom left; }
@@ -23,47 +26,45 @@
         .cta-button-standard { background-color: var(--brand-blue); }
         .cta-button-standard::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, var(--brand-green), var(--brand-blue), var(--brand-green)); background-size: 250% 250%; z-index: -1; transition: opacity 0.4s ease-in-out; opacity: 0; }
         .cta-button-standard:hover::before { opacity: 1; animation: gradient-loop 4s ease infinite; }
+        .contact-card { transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; }
         .contact-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0, 85, 164, 0.1); background-color: white; }
         .contact-card:hover .contact-icon { background-image: linear-gradient(45deg, var(--brand-blue), var(--brand-green)); color: white; }
-        .contact-card, .contact-icon { transition: all 0.3s ease; }
+        .contact-icon { transition: all 0.3s ease; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-700">
 
     <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 border-b border-slate-200">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="/" class="flex items-center gap-3 shrink-0">
+            <a href="index.html" class="flex items-center gap-3 shrink-0">
                 <img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-14 w-auto">
                 <span class="font-bold text-xl text-slate-800 tracking-tight hidden sm:inline" style="color: var(--brand-blue);">FC Gestão Estratégica</span>
             </a>
             <div class="hidden md:flex items-center space-x-8 font-medium text-slate-800">
                 <a href="sobre.html" class="gradient-text-hover">Sobre</a>
                 <a href="servicos.html" class="gradient-text-hover">Serviços</a>
-                <a href="/#processo" class="gradient-text-hover">Nosso Processo</a>
+                <a href="index.html#processo" class="gradient-text-hover">Nosso Processo</a>
                 <a href="blog.html" class="gradient-text-hover">Blog</a>
                 <a href="contato.html" class="text-white font-bold py-2 px-5 rounded-lg cta-button cta-button-standard">Contato</a>
             </div>
             <div class="md:hidden"><button id="mobile-menu-button" class="text-slate-800"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
         </nav>
-        <div id="mobile-menu" class="hidden absolute top-0 left-0 w-full bg-white z-50 shadow-xl">
-             <div class="flex justify-between items-center px-6 py-3 border-b">
-                <a href="/" class="flex items-center gap-3 shrink-0">
-                   <img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto">
-                </a>
-                <button id="close-mobile-menu" class="text-slate-700"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
-            </div>
-            <div class="p-6 flex flex-col space-y-4">
-                <a href="sobre.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Sobre</a>
-                <a href="servicos.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Serviços</a>
-                <a href="/#processo" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Nosso Processo</a>
-                <a href="blog.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Blog</a>
-                <a href="contato.html" class="block mt-4 text-lg text-white font-bold py-3 px-6 rounded-lg text-center cta-button cta-button-standard">Contato</a>
-            </div>
+       <!-- Menu Mobile -->
+       <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-sm fixed top-0 left-0 h-full w-64 z-50 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="p-6">
+            <a href="index.html" class="shrink-0 mb-8 inline-block"><img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto"></a>
+            <a href="sobre.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Sobre</a>
+            <a href="servicos.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Serviços</a>
+            <a href="index.html#processo" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Nosso Processo</a>
+            <a href="blog.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Blog</a>
+            <a href="contato.html" class="block mt-4 text-lg text-white font-bold py-3 px-6 rounded-lg text-center cta-button cta-button-standard">Contato</a>
         </div>
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-slate-700"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+    </div>
     </header>
 
     <main>
-        <section class="py-24 sm:py-32">
+        <section class="py-24 sm:py-32 animated-item fade-in">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto">
                     <span class="font-bold text-[--brand-blue]">FALE CONOSCO</span>
@@ -71,7 +72,7 @@
                     <p class="mt-4 text-lg text-slate-600">Nossa equipe está à disposição para analisar as necessidades do seu projeto e propor a solução mais eficaz. Envie-nos uma mensagem ou utilize um dos canais abaixo.</p>
                 </div>
 
-                <div class="mt-20 bg-white border border-slate-200 rounded-2xl overflow-hidden grid md:grid-cols-5 shadow-xl">
+                <div class="mt-16 sm:mt-20 bg-white border border-slate-200 rounded-2xl overflow-hidden grid md:grid-cols-5 shadow-xl">
                     <div class="md:col-span-3 p-8 md:p-12">
                         <h2 class="text-2xl font-bold text-slate-800">Envie sua mensagem</h2>
                         <form action="#" method="POST" class="mt-8 space-y-6">
@@ -96,7 +97,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="md:col-span-2 bg-slate-50 p-8 md:p-12 flex flex-col justify-center border-l border-slate-200">
+                    <div class="md:col-span-2 bg-slate-50 p-8 md:p-12 flex flex-col justify-center border-t md:border-t-0 md:border-l border-slate-200">
                          <div class="space-y-8">
                              <a href="#" class="group flex items-start p-4 rounded-lg contact-card -m-4"><div class="bg-slate-100 rounded-lg p-3 mr-4 contact-icon"><svg class="w-6 h-6 text-[--brand-blue]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg></div><div><h4 class="font-bold text-slate-900">Endereço</h4><p class="text-slate-600">Belo Horizonte, MG, Brasil</p></div></a>
                              <a href="mailto:contato@fcgestaoestrategica.com.br" class="group flex items-start p-4 rounded-lg contact-card -m-4"><div class="bg-slate-100 rounded-lg p-3 mr-4 contact-icon"><svg class="w-6 h-6 text-[--brand-blue]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></div><div><h4 class="font-bold text-slate-900">E-mail</h4><p class="text-slate-600">contato@fcgestaoestrategica.com.br</p></div></a>
@@ -110,25 +111,39 @@
 
     <footer class="bg-white border-t border-slate-200">
         <div class="container mx-auto px-6 py-8 text-center text-slate-500">
-            <img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto mx-auto mb-4">
+            <a href="index.html"><img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto mx-auto mb-4"></a>
             <p>&copy; 2024 FC Gestão Estratégica. Todos os direitos reservados.</p>
         </div>
     </footer>
     
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+             const animationObserver = new IntersectionObserver(entries => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { 
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.animated-item').forEach(item => {
+                animationObserver.observe(item);
+            });
+
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const closeMobileMenuButton = document.getElementById('close-mobile-menu');
             const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-
-            const openMenu = () => mobileMenu.classList.remove('hidden');
-            const closeMenu = () => mobileMenu.classList.add('hidden');
+            
+            const openMenu = () => mobileMenu.classList.remove('-translate-x-full');
+            const closeMenu = () => mobileMenu.classList.add('-translate-x-full');
 
             if(mobileMenuButton) mobileMenuButton.addEventListener('click', openMenu);
             if(closeMobileMenuButton) closeMobileMenuButton.addEventListener('click', closeMenu);
-            mobileMenuLinks.forEach(link => link.addEventListener('click', closeMenu));
         });
     </script>
 </body>
 </html>
+
