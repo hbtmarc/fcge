@@ -1,70 +1,105 @@
-Projeto de Revitalização do Site | FC Gestão Estratégica
+<div align="center">
+<img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" width="200px" style="border-radius: 10px; margin-bottom: 20px;">
+<h1><strong>Projeto de Revitalização | FC Gestão Estratégica</strong></h1>
+<p>Revitalização completa do site institucional com foco em <strong>performance</strong>, <strong>SEO</strong> e uma <strong>experiência de usuário (UX)</strong> de alto nível.</p>
 
-1. Visão Geral do Projeto
+<p>
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen%3Fstyle%3Dfor-the-badge" alt="Status: Concluído">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Vers%C3%A3o-1.0.0-blue%3Fstyle%3Dfor-the-badge" alt="Versão 1.0.0">
+<img src="https://www.google.com/search?q=https://img.shields.io/github/license/hbtmarc/fcge%3Fstyle%3Dfor-the-badge%26color%3Dinformational" alt="Licença">
+</p>
+</div>
 
-Este repositório contém os arquivos da revitalização completa do site da FC Gestão Estratégica.
-O projeto foi concebido para modernizar a presença digital da empresa, migrando de uma plataforma WordPress para uma arquitetura estática, focada em performance, segurança e uma experiência de usuário (UX) de alto nível.
+<div align="center">
+<h2 style="border-bottom: 2px solid #0055A4; padding-bottom: 5px; display: inline-block;">🚀 Navegue pelo Site</h2>
+<p>Explore as páginas do projeto que estão no ar através dos links abaixo:</p>
+<table width="90%" style="border: none; text-align: center;">
+<tr style="background-color: transparent;">
+<td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
+<a href="https://hbtmarc.github.io/fcge/" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🏠<br>Home</a>
+</td>
+<td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
+<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/servicos.html" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🛠️<br>Serviços</a>
+</td>
+<td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
+<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/sobre.html" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🏢<br>Sobre Nós</a>
+</td>
+<td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
+<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/contato.html" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">📞<br>Contato</a>
+</td>
+<td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
+<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/blog.html" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">✍️<br>Blog</a>
+</td>
+</tr>
+</table>
+</div>
+<br>
+<br>
 
-O objetivo principal é transformar o site em uma poderosa ferramenta de negócios, otimizada para conversão e com excelente posicionamento em mecanismos de busca para o termo estratégico "Estudo de Dispersão Atmosférica".
+📋 Detalhes do Projeto
+<p></p>
+<details>
+<summary><strong>🎯 Objetivos Estratégicos</strong></summary>
+<br>
+O projeto foi guiado pelos seguintes pilares:
+<ul>
+<li>🎨 <strong>UX/UI Profissional:</strong> Implementar um design moderno, limpo e intuitivo, seguindo as melhores práticas de mercado para transmitir profissionalismo e confiança.</li>
+<li>🎯 <strong>Landing Page Focada em Conversão:</strong> Transformar a página inicial em uma ferramenta que guia o usuário de forma clara até a chamada para ação (contato).</li>
+<li>🔍 <strong>Otimização para SEO:</strong> Estruturar todo o conteúdo e código para maximizar o ranqueamento orgânico, especialmente para o termo "Estudo de Dispersão Atmosférica".</li>
+<li>⚡ <strong>Alta Performance e Segurança:</strong> Utilizar uma arquitetura estática para garantir um site extremamente rápido, seguro e com manutenção simplificada.</li>
+<li>📱 <strong>Responsividade Total:</strong> Garantir uma experiência de navegação perfeita e consistente em todos os dispositivos, de desktops a smartphones.</li>
+<li>🌐 <strong>Compatibilidade de Hospedagem:</strong> A estrutura simples permite que o site seja hospedado em qualquer serviço comum, sem configurações complexas.</li>
+</ul>
+</details>
 
-2. Objetivos Estratégicos
+<details>
+<summary><strong>💻 Tecnologias Utilizadas</strong></summary>
+<br>
+A escolha tecnológica priorizou a performance, simplicidade e as melhores ferramentas para um front-end moderno.
+<table style="width:100%; border: none;">
+<tr style="background-color: transparent;">
+<td align="center"><img src="https://www.google.com/search?q=https://img.shields.io/badge/HTML5-E34F26%3Fstyle%3Dfor-the-badge%26logo%3Dhtml5%26logoColor%3Dwhite" alt="HTML5"></td>
+<td align="center"><img src="https://www.google.com/search?q=https://img.shields.io/badge/Tailwind_CSS-38B2AC%3Fstyle%3Dfor-the-badge%26logo%3Dtailwind-css%26logoColor%3Dwhite" alt="Tailwind CSS"></td>
+<td align="center"><img src="https://www.google.com/search?q=https://img.shields.io/badge/CSS3-1572B6%3Fstyle%3Dfor-the-badge%26logo%3Dcss3%26logoColor%3Dwhite" alt="CSS3"></td>
+<td align="center"><img src="https://www.google.com/search?q=https://img.shields.io/badge/JavaScript-F7DF1E%3Fstyle%3Dfor-the-badge%26logo%3Djavascript%26logoColor%3Dblack" alt="JavaScript"></td>
+</tr>
+</table>
+<ul>
+<li><strong>HTML5:</strong> Para a estruturação semântica de todo o conteúdo.</li>
+<li><strong>Tailwind CSS:</strong> Framework CSS utility-first para a criação de um design moderno e responsivo de forma ágil.</li>
+<li><strong>CSS3 Customizado:</strong> Estilos personalizados para animações avançadas, efeitos de hover e parallax.</li>
+<li><strong>JavaScript (Vanilla):</strong> Utilizado para interatividade, como animações de scroll e modais, sem a necessidade de bibliotecas pesadas.</li>
+</ul>
+</details>
 
-    UX/UI Profissional: Implementar um design moderno, limpo e intuitivo, seguindo as melhores práticas de mercado para transmitir profissionalismo e confiança.
+<details>
+<summary><strong>✨ Funcionalidades e Destaques</strong></summary>
+<br>
+<ul>
+<li>✨ <strong>Animações de Scroll:</strong> Elementos surgem suavemente na tela à medida que o usuário rola a página.</li>
+<li>🏞️ <strong>Efeito Parallax:</strong> Seções com imagens de fundo fixas que criam uma percepção de profundidade.</li>
+<li>🖱️ <strong>Microinterações:</strong> Efeitos sutis de hover em botões e links que fornecem feedback visual.</li>
+<li>📌 <strong>Header Fixo e Inteligente:</strong> O cabeçalho permanece no topo da página durante a navegação para fácil acesso.</li>
+<li>🎬 <strong>Modal de Vídeo:</strong> Player de vídeo que abre sobre a página, mantendo o usuário no site.</li>
+</ul>
+</details>
 
-    Landing Page Focada em Conversão: Transformar a index.html em uma landing page que guia o usuário de forma clara, desde a apresentação dos diferenciais até a chamada para ação (contato).
-
-    Otimização para SEO: Estruturar todo o conteúdo e código do site para maximizar o ranqueamento orgânico. Isso inclui o uso de tags semânticas, meta-informações detalhadas, um sitemap.xml bem definido e um arquivo robots.txt otimizado.
-
-    Alta Performance e Segurança: Ao utilizar uma arquitetura estática, eliminamos as vulnerabilidades e a lentidão associadas a bancos de dados e plugins do WordPress, resultando em um site extremamente rápido e seguro.
-
-    Responsividade Total: Garantir uma experiência de navegação perfeita em todos os dispositivos, de desktops a smartphones.
-
-    Compatibilidade de Hospedagem: A estrutura simples permite que o site seja hospedado em qualquer serviço de hospedagem comum, sem a necessidade de configurações complexas.
-
-3. Tecnologias Utilizadas
-
-A simplicidade e a performance foram os pilares da escolha tecnológica.
-
-    HTML5: Para a estruturação semântica de todo o conteúdo.
-
-    Tailwind CSS: Um framework CSS utility-first para a criação de um design moderno e responsivo de forma rápida e consistente, diretamente no HTML.
-
-    CSS3 Customizado: Estilos personalizados para animações avançadas, efeitos de hover, gradientes e o efeito parallax, que não são cobertos nativamente pelo Tailwind.
-
-    JavaScript (Vanilla): Utilizado para adicionar interatividade e dinamismo, como as animações de scroll, o contador de números e a funcionalidade do menu mobile e do modal de vídeo. Nenhuma biblioteca ou framework pesado foi necessário, garantindo o carregamento rápido da página.
-
-4. Estrutura de Arquivos
-
-O projeto está organizado de forma lógica e clara, facilitando a manutenção futura.
-
+<details>
+<summary><strong>📂 Estrutura de Arquivos</strong></summary>
+<br>
+<pre>
 /
-|-- index.html            # [Landing Page principal]([url](https://hbtmarc.github.io/fcge/))
-|-- servicos.html         # Página detalhada de serviços (foco em SEO)
-|-- sobre.html            # Página institucional da empresa (foco em SEO)
-|-- contato.html          # Página de contato com formulário
-|-- blog.html             # Página agregadora para os posts do blog
-|-- sitemap.xml           # Mapa do site para os buscadores
-|-- robots.txt            # Diretrizes para os robôs de busca
-|-- README.md             # Esta documentação
+|-- index.html            <em>(Landing Page principal)</em>
+|-- servicos.html         <em>(Página detalhada de serviços)</em>
+|-- sobre.html            <em>(Página institucional da empresa)</em>
+|-- contato.html          <em>(Página de contato com formulário)</em>
+|-- blog.html             <em>(Página agregadora para os posts do blog)</em>
+|-- sitemap.xml           <em>(Mapa do site para os buscadores)</em>
+|-- robots.txt            <em>(Diretrizes para os robôs de busca)</em>
+|-- README.md             <em>(Esta documentação)</em>
+</pre>
+</details>
 
-5. Funcionalidades e Destaques
-
-    Animações de Scroll: Elementos surgem suavemente na tela (fade-in, fade-in-left, fade-in-right) à medida que o usuário rola a página, criando uma experiência de navegação dinâmica e engajante.
-
-    Efeito Parallax: Seções de fundo com imagens fixas que criam uma percepção de profundidade durante o scroll, notavelmente na seção "Nosso Processo".
-
-    Microinterações: Efeitos sutis de hover em botões, links e cards que fornecem feedback visual ao usuário, melhorando a usabilidade.
-
-    Header Fixo e Inteligente: O cabeçalho permanece no topo da página durante a navegação, com um efeito de backdrop-blur para manter a legibilidade.
-
-    Modal de Vídeo: Um player de vídeo que abre em um modal sobre a página, evitando que o usuário precise sair do site para assistir a um conteúdo institucional.
-
-    Design Responsivo Mobile-First: O layout foi pensado primeiramente para telas pequenas e depois adaptado para telas maiores, garantindo uma usabilidade impecável no mobile.
-
-6. Manutenção e Atualizações
-
-    Conteúdo de Texto: Para alterar textos, basta editar diretamente o conteúdo dentro das tags HTML nos arquivos correspondentes (ex: <p>Altere este texto aqui</p>).
-
-    Imagens: As imagens são carregadas a partir de URLs. Para alterá-las, substitua o link no atributo src da tag <img> ou no background-image do estilo CSS.
-
-    Cores e Fontes: As cores principais (--brand-blue, --brand-green) e a fonte principal (Inter) estão definidas no bloco <style> no <head> de cada arquivo HTML, facilitando a alteração global da identidade visual.
+<div align="center">
+<p>Desenvolvido como parte de um projeto de modernização e reposicionamento estratégico.</p>
+</div>
