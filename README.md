@@ -4,9 +4,9 @@
 <p>Revitalização completa do site institucional com foco em <strong>performance</strong>, <strong>SEO</strong> e uma <strong>experiência de usuário (UX)</strong> de alto nível.</p>
 
 <p>
-<img src="[https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen%3Fstyle%3Dfor-the-badge](https://icons8.com.br/icon/kCNfpZEhheCl/selecionado)" alt="Status: Concluído">
-<img src="https://img.shields.io/badge/Vers%C3%A3o-2.0.0-blue%3Fstyle%3Dfor-the-badge" alt="Versão 2.0.0">
-<img src="https://img.shields.io/github/license/hbtmarc/fcge%3Fstyle%3Dfor-the-badge%26color%3Dinformational" alt="Licença">
+<img src="https://icons8.com.br/icon/kCNfpZEhheCl/selecionado" alt="Status: Concluído">
+<img src="https://icons8.com.br/icon/cvB6JC7HJn9v/copiar" alt="Versão 1.0.0">
+<img src="https://icons8.com.br/icon/tYGHPEO9yx8X/diploma-1" alt="Licença">
 </p>
 </div>
 
