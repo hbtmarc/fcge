@@ -4,9 +4,9 @@
 <p>Revitalização completa do site institucional com foco em <strong>performance</strong>, <strong>SEO</strong> e uma <strong>experiência de usuário (UX)</strong> de alto nível.</p>
 
 <p>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen%3Fstyle%3Dfor-the-badge" alt="Status: Concluído">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Vers%C3%A3o-1.0.0-blue%3Fstyle%3Dfor-the-badge" alt="Versão 1.0.0">
-<img src="https://www.google.com/search?q=https://img.shields.io/github/license/hbtmarc/fcge%3Fstyle%3Dfor-the-badge%26color%3Dinformational" alt="Licença">
+<img src="https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen%3Fstyle%3Dfor-the-badge" alt="Status: Concluído">
+<img src="https://img.shields.io/badge/Vers%C3%A3o-1.0.0-blue%3Fstyle%3Dfor-the-badge" alt="Versão 1.0.0">
+<img src="https://img.shields.io/github/license/hbtmarc/fcge%3Fstyle%3Dfor-the-badge%26color%3Dinformational" alt="Licença">
 </p>
 </div>
 
@@ -19,16 +19,16 @@
 <a href="https://hbtmarc.github.io/fcge/" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🏠<br>Home</a>
 </td>
 <td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
-<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/servicos" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🛠️<br>Serviços</a>
+<a href="https://hbtmarc.github.io/fcge/servicos" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🛠️<br>Serviços</a>
 </td>
 <td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
-<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/sobre" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🏢<br>Sobre Nós</a>
+<a href="https://hbtmarc.github.io/fcge/sobre" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🏢<br>Sobre Nós</a>
 </td>
 <td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
-<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/contato" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">📞<br>Contato</a>
+<a href="https://hbtmarc.github.io/fcge/contato" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">📞<br>Contato</a>
 </td>
 <td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
-<a href="https://www.google.com/search?q=https://hbtmarc.github.io/fcge/blog" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">✍️<br>Blog</a>
+<a href="https://hbtmarc.github.io/fcge/blog" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">✍️<br>Blog</a>
 </td>
 </tr>
 </table>
@@ -58,10 +58,10 @@ O projeto foi guiado pelos seguintes pilares:
 A escolha tecnológica priorizou a performance, simplicidade e as melhores ferramentas para um front-end moderno.
 <table style="width:100%; border: none;">
 <tr style="background-color: transparent;">
-<td align="center"><img src="https://www.google.com/search?q=https://img.shields.io/badge/HTML5-E34F26%3Fstyle%3Dfor-the-badge%26logo%3Dhtml5%26logoColor%3Dwhite" alt="HTML5"></td>
-<td align="center"><img src="https://www.google.com/search?q=https://img.shields.io/badge/Tailwind_CSS-38B2AC%3Fstyle%3Dfor-the-badge%26logo%3Dtailwind-css%26logoColor%3Dwhite" alt="Tailwind CSS"></td>
-<td align="center"><img src="https://www.google.com/search?q=https://img.shields.io/badge/CSS3-1572B6%3Fstyle%3Dfor-the-badge%26logo%3Dcss3%26logoColor%3Dwhite" alt="CSS3"></td>
-<td align="center"><img src="https://www.google.com/search?q=https://img.shields.io/badge/JavaScript-F7DF1E%3Fstyle%3Dfor-the-badge%26logo%3Djavascript%26logoColor%3Dblack" alt="JavaScript"></td>
+<td align="center"><img src="https://img.shields.io/badge/HTML5-E34F26%3Fstyle%3Dfor-the-badge%26logo%3Dhtml5%26logoColor%3Dwhite" alt="HTML5"></td>
+<td align="center"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC%3Fstyle%3Dfor-the-badge%26logo%3Dtailwind-css%26logoColor%3Dwhite" alt="Tailwind CSS"></td>
+<td align="center"><img src="https://img.shields.io/badge/CSS3-1572B6%3Fstyle%3Dfor-the-badge%26logo%3Dcss3%26logoColor%3Dwhite" alt="CSS3"></td>
+<td align="center"><img src="https://img.shields.io/badge/JavaScript-F7DF1E%3Fstyle%3Dfor-the-badge%26logo%3Djavascript%26logoColor%3Dblack" alt="JavaScript"></td>
 </tr>
 </table>
 <ul>
