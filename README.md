@@ -5,7 +5,7 @@
 
 <p>
 <img src="https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen%3Fstyle%3Dfor-the-badge" alt="Status: Concluído">
-<img src="https://img.shields.io/badge/Vers%C3%A3o-1.0.0-blue%3Fstyle%3Dfor-the-badge" alt="Versão 1.0.0">
+<img src="https://img.shields.io/badge/Vers%C3%A3o-2.0.0-blue%3Fstyle%3Dfor-the-badge" alt="Versão 2.0.0">
 <img src="https://img.shields.io/github/license/hbtmarc/fcge%3Fstyle%3Dfor-the-badge%26color%3Dinformational" alt="Licença">
 </p>
 </div>
@@ -19,25 +19,29 @@
 <a href="https://hbtmarc.github.io/fcge/" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🏠<br>Home</a>
 </td>
 <td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
-<a href="https://hbtmarc.github.io/fcge/servicos" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🛠️<br>Serviços</a>
+<a href="https://hbtmarc.github.io/fcge/servicos.html" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🛠️<br>Serviços</a>
 </td>
 <td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
-<a href="https://hbtmarc.github.io/fcge/sobre" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🏢<br>Sobre Nós</a>
+<a href="https://hbtmarc.github.io/fcge/sobre.html" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">🏢<br>Sobre Nós</a>
 </td>
 <td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
-<a href="https://hbtmarc.github.io/fcge/contato" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">📞<br>Contato</a>
+<a href="https://hbtmarc.github.io/fcge/contato.html" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">📞<br>Contato</a>
 </td>
 <td style="padding: 10px; border-radius: 8px; background-color: #f1f5f9;">
-<a href="https://hbtmarc.github.io/fcge/blog" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">✍️<br>Blog</a>
+<a href="https://hbtmarc.github.io/fcge/blog.html" style="text-decoration: none; color: #0055A4; font-weight: bold; font-size: 1.1em;">✍️<br>Blog</a>
 </td>
 </tr>
 </table>
-</div>
-<br>
-<br>
 
+<h3 style="margin-top: 2rem;">Artigos Recentes:</h3>
+<p>
+<a href="https://hbtmarc.github.io/fcge/artigo-aermod.html" style="margin: 0 10px;">Desvendando o AERMOD</a> |
+<a href="https://hbtmarc.github.io/fcge/artigo-cetesb.html" style="margin: 0 10px;">Novas diretrizes da CETESB</a> |
+<a href="https://hbtmarc.github.io/fcge/artigo-qualidade-ar.html" style="margin: 0 10px;">A importância do Monitoramento</a>
+</p>
+</div>
 📋 Detalhes do Projeto
-<p></p>
+
 <details>
 <summary><strong>🎯 Objetivos Estratégicos</strong></summary>
 <br>
@@ -81,6 +85,7 @@ A escolha tecnológica priorizou a performance, simplicidade e as melhores ferra
 <li>🖱️ <strong>Microinterações:</strong> Efeitos sutis de hover em botões e links que fornecem feedback visual.</li>
 <li>📌 <strong>Header Fixo e Inteligente:</strong> O cabeçalho permanece no topo da página durante a navegação para fácil acesso.</li>
 <li>🎬 <strong>Modal de Vídeo:</strong> Player de vídeo que abre sobre a página, mantendo o usuário no site.</li>
+<li>📰 <strong>Seção de Blog:</strong> Páginas de artigos individuais para aprofundamento de conteúdo e SEO.</li>
 </ul>
 </details>
 
@@ -89,15 +94,29 @@ A escolha tecnológica priorizou a performance, simplicidade e as melhores ferra
 <br>
 <pre>
 /
-|-- index.html            <em>(Landing Page principal)</em>
-|-- servicos.html         <em>(Página detalhada de serviços)</em>
-|-- sobre.html            <em>(Página institucional da empresa)</em>
-|-- contato.html          <em>(Página de contato com formulário)</em>
-|-- blog.html             <em>(Página agregadora para os posts do blog)</em>
-|-- sitemap.xml           <em>(Mapa do site para os buscadores)</em>
-|-- robots.txt            <em>(Diretrizes para os robôs de busca)</em>
-|-- README.md             <em>(Esta documentação)</em>
+|-- index.html                    <em>(Landing Page principal)</em>
+|-- servicos.html                 <em>(Página detalhada de serviços)</em>
+|-- sobre.html                    <em>(Página institucional da empresa)</em>
+|-- contato.html                  <em>(Página de contato com formulário)</em>
+|-- blog.html                     <em>(Página agregadora para os posts do blog)</em>
+|-- artigo-aermod.html            <em>(Página do artigo sobre AERMOD)</em>
+|-- artigo-cetesb.html            <em>(Página do artigo sobre CETESB)</em>
+|-- artigo-qualidade-ar.html      <em>(Página do artigo sobre Qualidade do Ar)</em>
+|-- sitemap.xml                   <em>(Mapa do site para os buscadores)</em>
+|-- robots.txt                    <em>(Diretrizes para os robôs de busca)</em>
+|-- README.md                     <em>(Esta documentação)</em>
 </pre>
+</details>
+
+<details>
+<summary><strong>☁️ Como Fazer o Deploy (Hospedagem)</strong></summary>
+<br>
+A hospedagem deste site é extremamente simples:
+<ol>
+<li>Escolha um provedor de hospedagem de sites estáticos (Netlify, Vercel, GitHub Pages, etc.).</li>
+<li>Faça o upload de todos os arquivos do projeto para a pasta raiz do seu servidor (geralmente <code>public_html</code> ou <code>www</code>).</li>
+</ol>
+O site estará no ar, sem necessidade de configuração de banco de dados ou backend.
 </details>
 
 <div align="center">
