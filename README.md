@@ -41,7 +41,8 @@
 </p>
 </div>
 📋 Detalhes do Projeto
-<br>
+<p></p>
+<br><br>
 <details>
 <summary><strong>🎯 Objetivos Estratégicos</strong></summary>
 <br>
