@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cases de Sucesso | FC Gestão Estratégica</title>
+    <meta name="description" content="Conheça os projetos realizados pela FC Gestão Estratégica e como ajudamos empresas a alcançar excelência em gestão ambiental e qualidade do ar.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --brand-blue: #0055A4; --brand-green: #6EBE44; }
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: #F8FAFC; }
+        .animated-item { opacity: 0; transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .fade-in { transform: translateY(70px); }
+        .animated-item.is-visible { opacity: 1; transform: translate(0, 0); }
+        .gradient-text-hover { position: relative; text-decoration: none; display: inline-block; }
+        .gradient-text-hover::after { content: ''; position: absolute; width: 100%; height: 2px; bottom: -4px; left: 0; background: linear-gradient(90deg, var(--brand-blue), var(--brand-green)); transform: scaleX(0); transform-origin: bottom right; transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1); }
+        .gradient-text-hover:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+        @keyframes gradient-loop { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .cta-button { transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 4px 6px rgba(0, 85, 164, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); position: relative; z-index: 1; overflow: hidden; }
+        .cta-button:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 10px 20px rgba(0, 85, 164, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1); }
+        .cta-button-standard { background-color: var(--brand-blue); }
+        .cta-button-standard::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, var(--brand-green), var(--brand-blue), var(--brand-green)); background-size: 250% 250%; z-index: -1; transition: opacity 0.4s ease-in-out; opacity: 0; }
+        .cta-button-standard:hover::before { opacity: 1; animation: gradient-loop 4s ease infinite; }
+        .page-header { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+        .case-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .case-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 85, 164, 0.15); }
+        .testimonial-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .testimonial-card:hover { transform: translateY(-4px); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700">
+
+    <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 border-b border-slate-200">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 shrink-0">
+                <img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-14 w-auto">
+                <span class="font-bold text-xl text-slate-800 tracking-tight hidden sm:inline" style="color: var(--brand-blue);">FC Gestão Estratégica</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium text-slate-800">
+                <a href="sobre.html" class="gradient-text-hover">Sobre</a>
+                <a href="servicos.html" class="gradient-text-hover">Serviços</a>
+                <a href="cases.html" class="gradient-text-hover font-bold text-[--brand-blue]">Cases</a>
+                <a href="index.html#processo" class="gradient-text-hover">Nosso Processo</a>
+                <a href="blog.html" class="gradient-text-hover">Blog</a>
+                <a href="contato.html" class="text-white font-bold py-2 px-5 rounded-lg cta-button cta-button-standard">Contato</a>
+            </div>
+            <div class="md:hidden"><button id="mobile-menu-button" class="text-slate-800"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-sm fixed top-0 left-0 h-full w-64 z-50 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="p-6">
+                <a href="index.html" class="shrink-0 mb-8 inline-block"><img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto"></a>
+                <a href="sobre.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Sobre</a>
+                <a href="servicos.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Serviços</a>
+                <a href="cases.html" class="block py-3 text-lg text-[--brand-blue] font-bold">Cases</a>
+                <a href="index.html#processo" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Nosso Processo</a>
+                <a href="blog.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Blog</a>
+                <a href="contato.html" class="block mt-4 text-lg text-white font-bold py-3 px-6 rounded-lg text-center cta-button cta-button-standard">Contato</a>
+            </div>
+            <button id="close-mobile-menu" class="absolute top-6 right-6 text-slate-700"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative page-header text-center py-24 sm:py-32" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-slate-900/60 z-0"></div>
+            <div class="relative z-10 container mx-auto px-6 animated-item fade-in">
+                <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-white">Cases de Sucesso</h1>
+                <p class="mt-4 text-lg text-slate-200 max-w-2xl mx-auto">Projetos que transformam desafios ambientais em resultados concretos</p>
+            </div>
+        </section>
+
+        <section class="py-20 sm:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="animated-item fade-in">
+                        <span class="block text-5xl font-black text-[--brand-blue]">300+</span>
+                        <p class="mt-2 text-lg text-slate-600">Projetos Concluídos</p>
+                    </div>
+                    <div class="animated-item fade-in" style="transition-delay: 200ms;">
+                        <span class="block text-5xl font-black text-[--brand-blue]">98%</span>
+                        <p class="mt-2 text-lg text-slate-600">Taxa de Aprovação</p>
+                    </div>
+                    <div class="animated-item fade-in" style="transition-delay: 400ms;">
+                        <span class="block text-5xl font-black text-[--brand-blue]">20+</span>
+                        <p class="mt-2 text-lg text-slate-600">Cidades Atendidas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 sm:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 animated-item fade-in">
+                    <span class="font-bold text-[--brand-blue]">NOSSOS PROJETOS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Estudos Realizados</h2>
+                    <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Soluções técnicas aplicadas em diversos segmentos industriais</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden case-card animated-item fade-in">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" alt="Mineração" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-[--brand-blue] rounded-full mb-3">Mineração</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Estudo de Dispersão Atmosférica</h3>
+                            <p class="text-slate-600 mb-4">Modelagem AERMOD para empreendimento de extração mineral em Minas Gerais, garantindo conformidade com padrões FEAM.</p>
+                            <ul class="space-y-2 text-sm text-slate-600">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Análise de 5 anos de dados meteorológicos</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Aprovado em primeira análise</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden case-card animated-item fade-in" style="transition-delay: 100ms;">
+                        <img src="https://images.unsplash.com/photo-1617109483509-8f30d0b59f16?q=80&w=2070&auto=format&fit=crop" alt="Indústria Química" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-green-100 text-[--brand-green] rounded-full mb-3">Indústria Química</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Plano de Monitoramento da Qualidade do Ar</h3>
+                            <p class="text-slate-600 mb-4">PMQAr completo para indústria química em Goiás, com rede de 8 estações de monitoramento.</p>
+                            <ul class="space-y-2 text-sm text-slate-600">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>8 pontos de monitoramento</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Monitoramento contínuo por 2 anos</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden case-card animated-item fade-in" style="transition-delay: 200ms;">
+                        <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?q=80&w=2073&auto=format&fit=crop" alt="Siderurgia" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-[--brand-blue] rounded-full mb-3">Siderurgia</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Inventário de Emissões Atmosféricas</h3>
+                            <p class="text-slate-600 mb-4">Levantamento completo de fontes e quantificação de emissões para siderúrgica de grande porte.</p>
+                            <ul class="space-y-2 text-sm text-slate-600">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>120 fontes mapeadas</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Base para licenciamento ambiental</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden case-card animated-item fade-in" style="transition-delay: 300ms;">
+                        <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=2072&auto=format&fit=crop" alt="Energia" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-green-100 text-[--brand-green] rounded-full mb-3">Energia</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Estudo de Impacto Ambiental</h3>
+                            <p class="text-slate-600 mb-4">EIA/RIMA para termelétrica a gás natural, incluindo modelagem de dispersão e qualidade do ar.</p>
+                            <ul class="space-y-2 text-sm text-slate-600">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Potência de 500 MW</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Licença prévia aprovada</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden case-card animated-item fade-in" style="transition-delay: 400ms;">
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop" alt="Cimento" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-[--brand-blue] rounded-full mb-3">Cimento</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Parecer Técnico Meteorológico</h3>
+                            <p class="text-slate-600 mb-4">Análise climatológica para otimização de sistemas de controle de emissões em fábrica de cimento.</p>
+                            <ul class="space-y-2 text-sm text-slate-600">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Análise de 10 anos de dados</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Redução de 30% nas emissões</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden case-card animated-item fade-in" style="transition-delay: 500ms;">
+                        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop" alt="Petroquímica" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-green-100 text-[--brand-green] rounded-full mb-3">Petroquímica</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Plano Anual de Mitigação</h3>
+                            <p class="text-slate-600 mb-4">Estratégias de redução de emissões atmosféricas para complexo petroquímico conforme DN COPAM 230.</p>
+                            <ul class="space-y-2 text-sm text-slate-600">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>15 medidas de mitigação</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Conformidade DN 230/21</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 sm:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 animated-item fade-in">
+                    <span class="font-bold text-[--brand-blue]">DEPOIMENTOS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">O que nossos clientes dizem</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-8 rounded-xl shadow-lg testimonial-card animated-item fade-in">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-10 h-10 text-[--brand-blue]" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        </div>
+                        <p class="text-slate-700 mb-6 italic">"A FC Gestão Estratégica foi fundamental para o sucesso do nosso licenciamento. A equipe demonstrou profundo conhecimento técnico e agilidade na entrega dos estudos."</p>
+                        <div>
+                            <p class="font-bold text-slate-900">Carlos Eduardo Silva</p>
+                            <p class="text-sm text-slate-600">Gerente Ambiental - Mineradora XYZ</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 rounded-xl shadow-lg testimonial-card animated-item fade-in" style="transition-delay: 100ms;">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-10 h-10 text-[--brand-blue]" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        </div>
+                        <p class="text-slate-700 mb-6 italic">"Profissionais extremamente capacitados e comprometidos. O PMQAr foi elaborado com excelência e aprovado sem pendências. Recomendo fortemente!"</p>
+                        <div>
+                            <p class="font-bold text-slate-900">Mariana Costa</p>
+                            <p class="text-sm text-slate-600">Diretora de Sustentabilidade - Grupo Industrial ABC</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 rounded-xl shadow-lg testimonial-card animated-item fade-in" style="transition-delay: 200ms;">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-10 h-10 text-[--brand-blue]" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        </div>
+                        <p class="text-slate-700 mb-6 italic">"A modelagem atmosférica realizada pela FC foi determinante para otimizar nossos investimentos em controle de emissões. Excelente custo-benefício."</p>
+                        <div>
+                            <p class="font-bold text-slate-900">Roberto Mendes</p>
+                            <p class="text-sm text-slate-600">Coordenador de Meio Ambiente - Indústria Química DEF</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 sm:py-28 bg-slate-50 animated-item fade-in">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Nossa Presença Nacional</h2>
+                    <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Mais de 20 cidades brasileiras já confiaram em nossas soluções ambientais e estratégicas</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-stretch">
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col h-full">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-2xl font-bold text-slate-900">Cidades Atendidas</h3>
+                            <div class="bg-gradient-to-r from-[--brand-blue] to-[--brand-green] text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+                                +20 Cidades
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700 flex-grow overflow-y-auto" style="max-height: 500px;">
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Abadiânia - GO</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Alexânia - GO</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Alvorada - MG</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Arcos - MG</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Barão de Cocais - MG</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Bonfinópolis - GO</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Caucaia - CE</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Córrego Fundo - MG</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Garuva - SC</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Gentio do Ouro - BA</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Goianápolis - GO</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Ipojuca - PE</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Luís Eduardo Magalhães - BA</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Pains - MG</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Pedra do Indaiá - MG</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Piatã - BA</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Santa Cruz - RJ</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>São Gonçalo do Amarante - CE</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Silves - AM</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Uberaba - MG</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col h-full">
+                        <div id="regions_div" style="width: 100%; height: 100%;"></div>
+                    </div>
+                </div>
+
+                <div class="mt-16 bg-gradient-to-r from-[--brand-blue] to-[--brand-green] rounded-2xl p-8 text-white text-center">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">Leve nossas soluções para a sua cidade!</h3>
+                    <p class="text-lg mb-6 max-w-2xl mx-auto">Entre em contato e descubra como podemos ajudar sua organização com soluções ambientais especializadas.</p>
+                    <a href="contato.html" class="inline-block bg-white text-[--brand-blue] font-bold py-3 px-8 rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg">Fale Conosco</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-500">
+            <a href="index.html"><img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto mx-auto mb-4"></a>
+            <p>&copy; 2025 FC Gestão Estratégica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+             const animationObserver = new IntersectionObserver(entries => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { 
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.animated-item').forEach(item => {
+                animationObserver.observe(item);
+            });
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            const openMenu = () => mobileMenu.classList.remove('-translate-x-full');
+            const closeMenu = () => mobileMenu.classList.add('-translate-x-full');
+
+            if(mobileMenuButton) mobileMenuButton.addEventListener('click', openMenu);
+            if(closeMobileMenuButton) closeMobileMenuButton.addEventListener('click', closeMenu);
+        });
+
+        // Mapa Interativo do Brasil
+        google.charts.load('current', {
+            'packages':['geochart'],
+            'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+                ['State', 'Atendimento'],
+                ['BR-MG', 9],
+                ['BR-GO', 4],
+                ['BR-BA', 3],
+                ['BR-CE', 2],
+                ['BR-AM', 1],
+                ['BR-PE', 1],
+                ['BR-RJ', 1],
+                ['BR-SC', 1]
+            ]);
+
+            var options = {
+                region: 'BR',
+                resolution: 'provinces',
+                displayMode: 'regions',
+                colorAxis: {
+                    colors: ['#B8E6E1', '#6EBE44', '#0055A4'],
+                    minValue: 0,
+                    maxValue: 10
+                },
+                backgroundColor: '#F8FAFC',
+                datalessRegionColor: '#E8E8E8',
+                defaultColor: '#f5f5f5',
+                legend: 'none',
+                width: '100%',
+                height: '100%',
+                tooltip: {
+                    textStyle: {
+                        fontName: 'Inter',
+                        fontSize: 13
+                    }
+                }
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+            chart.draw(data, options);
+        }
+
+        window.addEventListener('resize', function() {
+            if (typeof drawRegionsMap === 'function') {
+                drawRegionsMap();
+            }
+        });
+    </script>
+</body>
+</html>
