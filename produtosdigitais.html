@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Digitais | FC Gestão Estratégica</title>
+    <meta name="description" content="Conheça as soluções digitais inovadoras da FC Gestão Estratégica para monitoramento ambiental e gestão da qualidade do ar.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --brand-blue: #0055A4; --brand-green: #6EBE44; }
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: #F8FAFC; }
+        .animated-item { opacity: 0; transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .fade-in { transform: translateY(70px); }
+        .animated-item.is-visible { opacity: 1; transform: translate(0, 0); }
+        .gradient-text-hover { position: relative; text-decoration: none; display: inline-block; }
+        .gradient-text-hover::after { content: ''; position: absolute; width: 100%; height: 2px; bottom: -4px; left: 0; background: linear-gradient(90deg, var(--brand-blue), var(--brand-green)); transform: scaleX(0); transform-origin: bottom right; transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1); }
+        .gradient-text-hover:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+        @keyframes gradient-loop { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .cta-button { transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); box-shadow: 0 4px 6px rgba(0, 85, 164, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); position: relative; z-index: 1; overflow: hidden; }
+        .cta-button:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 10px 20px rgba(0, 85, 164, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1); }
+        .cta-button-standard { background-color: var(--brand-blue); }
+        .cta-button-standard::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, var(--brand-green), var(--brand-blue), var(--brand-green)); background-size: 250% 250%; z-index: -1; transition: opacity 0.4s ease-in-out; opacity: 0; }
+        .cta-button-standard:hover::before { opacity: 1; animation: gradient-loop 4s ease infinite; }
+        .page-header { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+        .product-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 85, 164, 0.15); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700">
+
+    <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 border-b border-slate-200">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 shrink-0">
+                <img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-14 w-auto">
+                <span class="font-bold text-xl text-slate-800 tracking-tight hidden sm:inline" style="color: var(--brand-blue);">Gestão Estratégica</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium text-slate-800">
+                <a href="sobre.html" class="gradient-text-hover">Sobre</a>
+                <a href="servicos.html" class="gradient-text-hover">Serviços</a>
+                <a href="cases.html" class="gradient-text-hover">Cases</a>
+                <a href="produtosdigitais.html" class="gradient-text-hover font-bold text-[--brand-blue]">Produtos Digitais</a>
+                <a href="blog.html" class="gradient-text-hover">Blog</a>
+                <a href="contato.html" class="text-white font-bold py-2 px-5 rounded-lg cta-button cta-button-standard">Contato</a>
+            </div>
+            <div class="md:hidden"><button id="mobile-menu-button" class="text-slate-800"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-sm fixed top-0 left-0 h-full w-64 z-50 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="p-6">
+                <a href="index.html" class="shrink-0 mb-8 inline-block"><img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto"></a>
+                <a href="sobre.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Sobre</a>
+                <a href="servicos.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Serviços</a>
+                <a href="cases.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Cases</a>
+                <a href="produtosdigitais.html" class="block py-3 text-lg text-[--brand-blue] font-bold">Produtos Digitais</a>
+                <a href="blog.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Blog</a>
+                <a href="contato.html" class="block mt-4 text-lg text-white font-bold py-3 px-6 rounded-lg text-center cta-button cta-button-standard">Contato</a>
+            </div>
+            <button id="close-mobile-menu" class="absolute top-6 right-6 text-slate-700"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative page-header text-center py-24 sm:py-32" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-slate-900/70 z-0"></div>
+            <div class="relative z-10 container mx-auto px-6 animated-item fade-in">
+                <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-white">Produtos Digitais</h1>
+                <p class="mt-4 text-lg text-slate-200 max-w-2xl mx-auto">Soluções tecnológicas inovadoras para monitoramento e gestão ambiental</p>
+            </div>
+        </section>
+
+        <section class="py-20 sm:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 animated-item fade-in">
+                    <span class="font-bold text-[--brand-blue]">PORTFÓLIO DE SERVIÇOS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Serviços Especializados</h2>
+                    <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Soluções técnicas em gestão ambiental que combinam expertise regulatória com excelência na execução</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100">
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-700 h-48 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-[--brand-blue] rounded-full">Modelagem Atmosférica</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Estudo de Dispersão Atmosférica (EDA)</h3>
+                            <p class="text-slate-600 mb-4">Solução estratégica para visualizar e prever o comportamento de poluentes atmosféricos, incluindo inventário de fontes e simulação com modelos como AERMOD e WRF.</p>
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Inventário de fontes emissoras</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Simulação AERMOD certificada</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Dados meteorológicos WRF</span></li>
+                            </ul>
+                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 100ms;">
+                        <div class="bg-gradient-to-br from-green-500 to-green-700 h-48 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-green-100 text-[--brand-green] rounded-full">Sustentabilidade</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Estudo de Gases de Efeito Estufa (GEE)</h3>
+                            <p class="text-slate-600 mb-4">Elaboração de inventário corporativo de emissões, mapeando fontes diretas e indiretas, alinhado às melhores práticas e compromissos climáticos globais.</p>
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Inventário corporativo completo</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Governança ambiental fortalecida</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Alinhamento a padrões globais</span></li>
+                            </ul>
+                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 200ms;">
+                        <div class="bg-gradient-to-br from-purple-500 to-purple-700 h-48 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-purple-100 text-purple-700 rounded-full">Monitoramento</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Plano de Monitoramento da Qualidade do Ar</h3>
+                            <p class="text-slate-600 mb-4">Desenvolvimento de plano técnico para acompanhamento contínuo da qualidade do ar, com definição de parâmetros, pontos de amostragem e equipamentos adequados.</p>
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Rede de monitoramento eficiente</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Localização estratégica de pontos</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Especificação de métodos</span></li>
+                            </ul>
+                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 300ms;">
+                        <div class="bg-gradient-to-br from-orange-500 to-orange-700 h-48 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-orange-100 text-orange-700 rounded-full">Controle Ambiental</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Plano de Mitigação de Material Particulado</h3>
+                            <p class="text-slate-600 mb-4">Documento técnico estruturado para organizar ações de controle de emissões de partículas, com foco em melhoria ambiental e atendimento legal.</p>
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Planejamento anual estruturado</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Abordagem prática direcionada</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Conformidade legal garantida</span></li>
+                            </ul>
+                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 400ms;">
+                        <div class="bg-gradient-to-br from-red-500 to-red-700 h-48 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-red-100 text-red-700 rounded-full">Meteorologia</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Parecer Técnico Meteorológico</h3>
+                            <p class="text-slate-600 mb-4">Análise e interpretação de dados atmosféricos para subsidiar estudos ambientais, dispersão de poluentes e avaliação de risco climático.</p>
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Dados observacionais</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Modelagens numéricas</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Visão abrangente e confiável</span></li>
+                            </ul>
+                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 500ms;">
+                        <div class="bg-gradient-to-br from-teal-500 to-teal-700 h-48 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-teal-100 text-teal-700 rounded-full">Diagnóstico</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Diagnóstico de Qualidade do Ar e Ruído</h3>
+                            <p class="text-slate-600 mb-4">Caracterização das condições ambientais locais através de análise de dados, identificando áreas críticas e fontes de impacto.</p>
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Avaliação ar e ruído</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Identificação de áreas críticas</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Subsídio à gestão ambiental</span></li>
+                            </ul>
+                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 600ms;">
+                        <div class="bg-gradient-to-br from-indigo-500 to-indigo-700 h-48 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-indigo-100 text-indigo-700 rounded-full">Avaliação Ambiental</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Levantamento de Aspectos e Impactos (LAIA)</h3>
+                            <p class="text-slate-600 mb-4">Identificação e avaliação de aspectos ambientais e seus impactos, fundamental para sistemas de gestão ambiental e conformidade com ISO 14001.</p>
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Critérios técnicos e legais</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Estruturação de SGA</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Conformidade ISO 14001</span></li>
+                            </ul>
+                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 700ms;">
+                        <div class="bg-gradient-to-br from-cyan-500 to-cyan-700 h-48 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-cyan-100 text-cyan-700 rounded-full">Planejamento</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Estudos Estratégicos</h3>
+                            <p class="text-slate-600 mb-4">Análise integrada de cenários ambientais, operacionais e regulatórios para apoiar decisões estratégicas em projetos complexos.</p>
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Avaliação de riscos</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Planejamento ambiental</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Análise de viabilidade técnica</span></li>
+                            </ul>
+                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 800ms;">
+                        <div class="bg-gradient-to-br from-emerald-500 to-emerald-700 h-48 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-emerald-100 text-emerald-700 rounded-full">ISO 14001</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Gestão Ambiental ISO 14001</h3>
+                            <p class="text-slate-600 mb-4">Estruturação de Sistema de Gestão Ambiental com procedimentos, auditorias internas e treinamento para conformidade e melhoria contínua.</p>
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Procedimentos operacionais</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Auditorias internas</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Treinamento e capacitação</span></li>
+                            </ul>
+                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 900ms;">
+                        <div class="bg-gradient-to-br from-amber-500 to-amber-700 h-48 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-amber-100 text-amber-700 rounded-full">ISO 9001</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Gestão da Qualidade ISO 9001</h3>
+                            <p class="text-slate-600 mb-4">Estruturação de Sistema de Gestão da Qualidade com mapeamento de processos, documentação, auditorias e cultura de melhoria contínua.</p>
+                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Mapeamento de processos</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Documentação da qualidade</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Auditorias e treinamento</span></li>
+                            </ul>
+                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 sm:py-28 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center animated-item fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Soluções Completas em Gestão Ambiental</h2>
+                    <p class="text-lg text-slate-600 mb-8">Nossa equipe multidisciplinar está preparada para atender às necessidades específicas do seu projeto, combinando conhecimento técnico, experiência regulatória e comprometimento com a excelência. Entre em contato e descubra como podemos apoiar sua empresa.</p>
+                    <a href="contato.html" class="inline-block bg-gradient-to-r from-[--brand-blue] to-[--brand-green] text-white font-bold py-4 px-10 rounded-lg hover:scale-105 transition-transform duration-300 shadow-xl">Falar com Especialista</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-500">
+            <a href="index.html"><img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto mx-auto mb-4"></a>
+            <p>&copy; 2025 FC Gestão Estratégica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+             const animationObserver = new IntersectionObserver(entries => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { 
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.animated-item').forEach(item => {
+                animationObserver.observe(item);
+            });
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            const openMenu = () => mobileMenu.classList.remove('-translate-x-full');
+            const closeMenu = () => mobileMenu.classList.add('-translate-x-full');
+
+            if(mobileMenuButton) mobileMenuButton.addEventListener('click', openMenu);
+            if(closeMobileMenuButton) closeMobileMenuButton.addEventListener('click', closeMenu);
+        });
+    </script>
+</body>
+</html>
