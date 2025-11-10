@@ -5,45 +5,60 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+<!-- Página Principal -->
 <url>
   <loc>https://hbtmarc.github.io/fcge/</loc>
-  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
+  <lastmod>2025-11-10T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
+
+<!-- Páginas de Serviços (Alta prioridade - conversão) -->
 <url>
   <loc>https://hbtmarc.github.io/fcge/servicos.html</loc>
-  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
-  <priority>0.90</priority>
+  <lastmod>2025-11-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.95</priority>
 </url>
-<url>
-  <loc>https://hbtmarc.github.io/fcge/sobre.html</loc>
-  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+
+<!-- Página de Contato (Alta prioridade - conversão) -->
 <url>
   <loc>https://hbtmarc.github.io/fcge/contato.html</loc>
-  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2025-11-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
 </url>
+
+<!-- Sobre a Empresa -->
+<url>
+  <loc>https://hbtmarc.github.io/fcge/sobre.html</loc>
+  <lastmod>2025-11-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<!-- Blog (Conteúdo dinâmico - SEO) -->
 <url>
   <loc>https://hbtmarc.github.io/fcge/blog.html</loc>
-  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
+  <lastmod>2025-11-10T12:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<!-- Produtos Digitais (Em desenvolvimento) -->
+<url>
+  <loc>https://hbtmarc.github.io/fcge/produtosdigitais.html</loc>
+  <lastmod>2025-11-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
+</url>
+
+<!-- Cases e Projetos -->
+<url>
+  <loc>https://hbtmarc.github.io/fcge/cases.html</loc>
+  <lastmod>2025-11-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://hbtmarc.github.io/fcge/artigo-aermod.html</loc>
-  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://hbtmarc.github.io/fcge/artigo-cetesb.html</loc>
-  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://hbtmarc.github.io/fcge/artigo-qualidade-ar.html</loc>
-  <lastmod>2025-09-23T18:00:00+00:00</lastmod>
-  <priority>0.60</priority>
 </url>
 
 </urlset>

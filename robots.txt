@@ -1,12 +1,32 @@
-Allow all user agents to crawl the site
+# Robots.txt para FC Gestão Estratégica
+# Otimizado para SEO e indexação eficiente
 
+# Permitir acesso total aos principais buscadores
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Slurp
+User-agent: DuckDuckBot
+Allow: /
+
+# Regra geral para todos os outros crawlers
 User-agent: *
 Allow: /
-Disallow crawling of any potential admin or sensitive folders
-(Even for static sites, it's good practice)
 
+# Bloquear pastas desnecessárias ou sensíveis
 Disallow: /cgi-bin/
 Disallow: /admin/
-Point to the sitemap file
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /*.xml$ 
 
-Sitemap: https://www.google.com/search?q=https://www.fcgestaoestrategica.com.br/sitemap.xml
+# Permitir explicitamente recursos importantes para SEO
+Allow: /imagens/
+Allow: /*.css$
+Allow: /*.js$
+
+# Apontamento para sitemap (facilita indexação)
+Sitemap: https://hbtmarc.github.io/fcge/sitemap.xml
+
+# Crawl-delay (opcional - evita sobrecarga do servidor)
+# User-agent: *
+# Crawl-delay: 1
