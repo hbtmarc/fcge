@@ -139,6 +139,24 @@
             animation: gradient-loop 6s ease infinite;
         }
         
+        .hero-carousel {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .hero-carousel-image {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        .hero-carousel-image.active {
+            opacity: 1;
+        }
+        
         .diferencial-card {
             transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
@@ -246,8 +264,8 @@
     <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 border-b border-slate-200">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 shrink-0">
-                <img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-14 w-auto">
-                <span class="font-bold text-xl text-slate-800 tracking-tight hidden sm:inline" style="color: var(--brand-blue);">Gestão Estratégica</span>
+                <img src="imagens/logo/logo12-1.png" alt="Logo FC Gestão Estratégica" class="h-14 w-auto">
+                <span class="font-bold text-xl text-slate-800 tracking-tight hidden sm:inline" style="color: var(--brand-blue);">FC Gestão Estratégica</span>
             </a>
             <div class="hidden md:flex items-center space-x-8 font-medium text-slate-800">
                 <a href="sobre.html" class="gradient-text-hover">Sobre</a>
@@ -263,7 +281,7 @@
         <!-- Menu Mobile -->
         <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-sm fixed top-0 left-0 h-full w-64 z-50 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out">
              <div class="p-6">
-                <a href="index.html" class="shrink-0 mb-8 inline-block"><img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto"></a>
+                <a href="index.html" class="shrink-0 mb-8 inline-block"><img src="imagens/logo/logo12-1.png" alt="Logo FC Gestão Estratégica" class="h-12 w-auto"></a>
                 <a href="sobre.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Sobre</a>
                 <a href="servicos.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Serviços</a>
                 <a href="cases.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Cases</a>
@@ -278,7 +296,12 @@
 
     <main>
 
-        <section class="relative hero-parallax text-center pt-24 pb-32 sm:pt-44 sm:pb-40 overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=2070&auto=format&fit=crop');">
+        <section class="relative text-center pt-24 pb-32 sm:pt-44 sm:pb-40 overflow-hidden">
+            <div class="hero-carousel">
+                <div class="hero-carousel-image active" style="background-image: url('https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=2070&auto=format&fit=crop');"></div>
+                <div class="hero-carousel-image" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop');"></div>
+                <div class="hero-carousel-image" style="background-image: url('https://images.unsplash.com/photo-1486406146926.e57ca54a1af4?q=80&w=2070&auto=format&fit=crop');"></div>
+            </div>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-slate-900/30 z-0"></div>
             <div class="relative z-10 container mx-auto px-6 animated-item fade-in">
                 <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-white leading-tight">FC Gestão Estratégica<br> <span class="animated-gradient-text">Integrando e desenvolvendo soluções</span></h1>
@@ -341,19 +364,19 @@
                 <div class="text-center max-w-3xl mx-auto animated-item fade-in"><span class="font-bold text-[--brand-blue]">NOSSAS SOLUÇÕES</span><h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Serviços Especializados para sua Demanda</h2></div>
                 <div class="mt-16 space-y-16">
                     <div class="grid md:grid-cols-2 gap-12 items-center animated-item fade-in">
-                        <div class="md:order-2"><img src="https://images.unsplash.com/photo-1569142916960-885f868d6123?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2119" alt="Ilustração de Monitoramento da Qualidade do Ar" class="rounded-lg shadow-lg aspect-video object-cover"></div>
-                        <div class="md:order-1"><h3 class="text-2xl font-bold text-slate-900">Plano de Monitoramento da Qualidade do Ar (PMQAr)</h3><p class="mt-2 text-slate-600">Elaboração e execução de Planos de Monitoramento para atender às exigências legais.</p></div>
+                        <img src="imagens\Mapa_FC.webp" alt="Ilustração de Dispersão Atmosférica" class="rounded-lg shadow-lg aspect-video object-cover">
+                        <div><h3 class="text-2xl font-bold text-slate-900">Estudo de Dispersão Atmosférica</h3><p class="mt-2 text-slate-600">Análises com o modelo AERMOD para prever o impacto de emissões e garantir conformidade.</p></div>
                     </div>
                     <div class="grid md:grid-cols-2 gap-12 items-center animated-item fade-in">
-                        <img src="https://images.unsplash.com/photo-1660323917239-75608a4943a8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332" alt="Ilustração de Dispersão Atmosférica" class="rounded-lg shadow-lg aspect-video object-cover">
-                        <div><h3 class="text-2xl font-bold text-slate-900">Estudo de Dispersão Atmosférica</h3><p class="mt-2 text-slate-600">Análises com o modelo AERMOD para prever o impacto de emissões e garantir conformidade.</p></div>
+                        <div class="md:order-2"><img src="https://images.unsplash.com/photo-1569142916960-885f868d6123?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2119" alt="Ilustração de Monitoramento da Qualidade do Ar" class="rounded-lg shadow-lg aspect-video object-cover"></div>
+                        <div class="md:order-1"><h3 class="text-2xl font-bold text-slate-900">Plano de Monitoramento da Qualidade do Ar (PMQAr)</h3><p class="mt-2 text-slate-600">Elaboração e execução de Planos de Monitoramento para atender às exigências legais.</p></div>
                     </div>
                 </div>
                 <div class="text-center mt-16 animated-item fade-in"><a href="servicos.html" class="text-white font-bold py-3 px-8 rounded-lg text-lg cta-button cta-button-standard">Ver todos os serviços</a></div>
             </div>
         </section>
         
-        <section class="relative mid-parallax py-24 sm:py-28" style="background-image: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=2070&auto=format&fit=crop');">
+        <!-- <section class="relative mid-parallax py-24 sm:py-28" style="background-image: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=2070&auto=format&fit=crop');">
             <div class="absolute inset-0 bg-slate-900/60 z-0"></div>
             <div class="relative z-10 container mx-auto px-6 text-center">
                  <div class="grid md:grid-cols-3 gap-8 text-white">
@@ -362,9 +385,9 @@
                        <div class="animated-item fade-in" style="transition-delay: 400ms;"><span class="block text-5xl font-black"><span class="counter" data-target="100">0</span>%</span><p class="mt-2 text-lg text-slate-300">Projetos com Foco Estratégico</p></div>
                  </div>
             </div>
-        </section>
+        </section> -->
 
-        <section id="contato-preview" class="py-20 sm:py-28 bg-white">
+        <!-- <section id="contato-preview" class="py-20 sm:py-28 bg-white">
             <div class="container mx-auto px-6">
                 <div class="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden grid md:grid-cols-5 animated-item fade-in">
                     <div class="md:col-span-3 p-8 sm:p-12"><span class="font-bold text-[--brand-blue]">FALE CONOSCO</span><h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Pronto para dar o próximo passo?</h2><p class="mt-4 text-lg text-slate-600">Nossa equipe está à disposição para analisar as necessidades do seu projeto e propor a solução mais eficaz.</p><form action="#" method="POST" class="mt-8 space-y-6"><div><input type="text" name="name" required class="block w-full rounded-md border-gray-300 shadow-sm focus:border-[--brand-blue] focus:ring-[--brand-blue] p-3" placeholder="Seu nome"></div><div><input type="email" name="email" required class="block w-full rounded-md border-gray-300 shadow-sm focus:border-[--brand-blue] focus:ring-[--brand-blue] p-3" placeholder="Seu e-mail"></div><div><textarea name="message" rows="4" required class="block w-full rounded-md border-gray-300 shadow-sm focus:border-[--brand-blue] focus:ring-[--brand-blue] p-3" placeholder="Como podemos ajudar?"></textarea></div><div><button type="submit" class="w-full text-white font-bold py-3 px-6 rounded-lg cta-button cta-button-standard">Enviar Mensagem</button></div></form></div>
@@ -377,13 +400,65 @@
                     </div>
                 </div>
             </div>
+        </section> -->
+
+        <section class="py-20 sm:py-28 bg-slate-50 animated-item fade-in">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Nossa Presença Nacional</h2>
+                    <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Mais de 20 cidades brasileiras já confiaram em nossas soluções ambientais e estratégicas</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-stretch">
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col h-full">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-2xl font-bold text-slate-900">Cidades Atendidas</h3>
+                            <div class="bg-gradient-to-r from-[--brand-blue] to-[--brand-green] text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+                                +20 Cidades
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700 flex-grow overflow-y-auto" style="max-height: 500px;">
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Abadiânia - GO</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Alexânia - GO</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Alvorada - MG</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Arcos - MG</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Barão de Cocais - MG</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Bonfinópolis - GO</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Caucaia - CE</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Córrego Fundo - MG</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Garuva - SC</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Gentio do Ouro - BA</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Goianápolis - GO</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Ipojuca - PE</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Luís Eduardo Magalhães - BA</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Pains - MG</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Pedra do Indaiá - MG</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Piatã - BA</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Santa Cruz - RJ</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>São Gonçalo do Amarante - CE</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Silves - AM</span></div>
+                            <div class="flex items-center gap-2"><svg class="w-5 h-5 text-[--brand-green] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><span>Uberaba - MG</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col h-full">
+                        <div id="regions_div" style="width: 100%; height: 100%;"></div>
+                    </div>
+                </div>
+
+                <div class="mt-16 bg-gradient-to-r from-[--brand-blue] to-[--brand-green] rounded-2xl p-8 text-white text-center">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">Leve nossas soluções para a sua cidade!</h3>
+                    <p class="text-lg mb-6 max-w-2xl mx-auto">Entre em contato e descubra como podemos ajudar sua organização com soluções ambientais especializadas.</p>
+                    <a href="contato.html" class="inline-block bg-white text-[--brand-blue] font-bold py-3 px-8 rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg">Fale Conosco</a>
+                </div>
+            </div>
         </section>
         
     </main>
 
     <footer class="bg-white border-t border-slate-200">
         <div class="container mx-auto px-6 py-8 text-center text-slate-500">
-             <a href="index.html"><img src="https://cdn-ifmnf.nitrocdn.com/xixizGYjnLRTAIhQbxamOxLcwRPobwga/assets/images/optimized/rev-db1d12f/www.fcgestaoestrategica.com.br/wp-content/uploads/2022/12/logo12-1.jpg" alt="Logo FC Gestão Estratégica" class="h-12 w-auto mx-auto mb-4"></a>
+             <a href="index.html"><img src="imagens/logo/logo12-1.png" alt="Logo FC Gestão Estratégica" class="h-12 w-auto mx-auto mb-4"></a>
             <p>&copy; 2025 FC Gestão Estratégica. Todos os direitos reservados.</p>
         </div>
     </footer>
@@ -396,8 +471,21 @@
         </div>
     </div>
     
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            // Hero Carousel
+            const carouselImages = document.querySelectorAll('.hero-carousel-image');
+            let currentImageIndex = 0;
+            
+            const rotateCarousel = () => {
+                carouselImages[currentImageIndex].classList.remove('active');
+                currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+                carouselImages[currentImageIndex].classList.add('active');
+            };
+            
+            setInterval(rotateCarousel, 5000); // Muda a imagem a cada 5 segundos
+            
             const animationObserver = new IntersectionObserver(entries => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
@@ -495,7 +583,69 @@
                 }
             });
         });
+
+        // Mapa Interativo do Brasil
+        google.charts.load('current', {
+            'packages':['geochart'],
+            'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+                ['State', 'Atendimento'],
+                ['BR-MG', 9],  // Minas Gerais (9 cidades)
+                ['BR-GO', 4],  // Goiás (4 cidades)
+                ['BR-BA', 3],  // Bahia (3 cidades)
+                ['BR-CE', 2],  // Ceará (2 cidades)
+                ['BR-AM', 1],  // Amazonas (1 cidade)
+                ['BR-PE', 1],  // Pernambuco (1 cidade)
+                ['BR-RJ', 1],  // Rio de Janeiro (1 cidade)
+                ['BR-SC', 1]   // Santa Catarina (1 cidade)
+            ]);
+
+            var options = {
+                region: 'BR',
+                resolution: 'provinces',
+                displayMode: 'regions',
+                colorAxis: {
+                    colors: ['#B8E6E1', '#6EBE44', '#0055A4'],
+                    minValue: 0,
+                    maxValue: 10
+                },
+                backgroundColor: '#F8FAFC',
+                datalessRegionColor: '#E8E8E8',
+                defaultColor: '#f5f5f5',
+                legend: 'none',
+                width: '100%',
+                height: '100%',
+                tooltip: {
+                    textStyle: {
+                        fontName: 'Inter',
+                        fontSize: 13
+                    }
+                }
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+            
+            // Tooltip customizado ao passar o mouse
+            google.visualization.events.addListener(chart, 'onmouseover', function(entry) {
+                console.log('Mouse sobre:', entry);
+            });
+
+            chart.draw(data, options);
+        }
+
+        // Redesenha o mapa quando a janela é redimensionada
+        window.addEventListener('resize', function() {
+            if (typeof drawRegionsMap === 'function') {
+                drawRegionsMap();
+            }
+        });
     </script>
 </body>
 </html>
+
+
 
