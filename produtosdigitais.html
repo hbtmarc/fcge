@@ -33,6 +33,17 @@
         .product-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 25px 50px rgba(0, 85, 164, 0.2); }
         .product-card:hover .bg-gradient-to-br { transform: scale(1.05); }
         .product-card .bg-gradient-to-br { transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        .float-animation { animation: float 3s ease-in-out infinite; }
+        @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .spin-slow { animation: spin-slow 20s linear infinite; }
+        @keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(0, 85, 164, 0.4); } 70% { box-shadow: 0 0 0 20px rgba(0, 85, 164, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 85, 164, 0); } }
+        .pulse-ring { animation: pulse-ring 2s infinite; }
+        @keyframes shine { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        @keyframes scaleIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+        .scale-in { animation: scaleIn 0.6s ease-out forwards; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-700">
@@ -70,242 +81,272 @@
     </header>
 
     <main>
-        <section class="relative page-header text-center py-24 sm:py-32" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-slate-900/70 z-0"></div>
-            <div class="relative z-10 container mx-auto px-6 animated-item fade-in">
-                <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-white">Produtos Digitais</h1>
-                <p class="mt-4 text-lg text-slate-200 max-w-2xl mx-auto">Soluções tecnológicas e inovadoras para o seu empreendimento</p>
+        <section class="relative page-header text-center py-32 sm:py-40 overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/70 to-slate-900/80 z-0"></div>
+            
+            <!-- Elementos flutuantes de fundo -->
+            <div class="absolute inset-0 z-0">
+                <div class="absolute top-20 left-10 w-32 h-32 bg-[--brand-blue] rounded-full opacity-10 blur-3xl float-animation"></div>
+                <div class="absolute bottom-20 right-10 w-40 h-40 bg-[--brand-green] rounded-full opacity-10 blur-3xl float-animation" style="animation-delay: 1s;"></div>
+                <div class="absolute top-40 right-20 w-24 h-24 bg-[--brand-blue] rounded-full opacity-10 blur-3xl float-animation" style="animation-delay: 2s;"></div>
+            </div>
+
+            <div class="relative z-10 container mx-auto px-6">
+                <div class="inline-block mb-8 float-animation">
+                    <div class="relative">
+                        <svg class="w-32 h-32 mx-auto text-[--brand-green] spin-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                        </svg>
+                        <svg class="w-16 h-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black tracking-tighter text-white mb-6 animated-item fade-in">Produtos Digitais</h1>
+                <div class="inline-block bg-gradient-to-r from-[--brand-blue] via-[--brand-green] to-[--brand-blue] text-white px-8 py-3 rounded-full font-bold text-xl mb-6 animated-item fade-in shadow-2xl" style="background-size: 200% 100%; animation: gradient-loop 3s ease infinite; transition-delay: 200ms;">
+                    EM DESENVOLVIMENTO
+                </div>
+                <p class="mt-6 text-2xl text-slate-100 max-w-3xl mx-auto font-light animated-item fade-in" style="transition-delay: 400ms;">Novidades incríveis estão a caminho</p>
+                
+                <!-- Indicador de scroll -->
+                <div class="mt-16 animated-item fade-in" style="transition-delay: 600ms;">
+                    <svg class="w-8 h-8 mx-auto text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                    </svg>
+                </div>
             </div>
         </section>
 
-        <section class="py-20 sm:py-28 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 animated-item fade-in">
-                    <span class="font-bold text-[--brand-blue]">PORTFÓLIO DE SERVIÇOS</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Serviços Especializados</h2>
-                    <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Soluções técnicas em gestão ambiental que combinam expertise regulatória com excelência na execução</p>
+        <section class="py-24 sm:py-32 bg-white relative overflow-hidden">
+            <!-- Elementos decorativos de fundo -->
+            <div class="absolute top-0 left-0 w-full h-full opacity-5">
+                <div class="absolute top-20 left-20 w-64 h-64 bg-[--brand-blue] rounded-full blur-3xl"></div>
+                <div class="absolute bottom-20 right-20 w-64 h-64 bg-[--brand-green] rounded-full blur-3xl"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-20 animated-item fade-in">
+                    <div class="inline-block mb-4">
+                        <span class="font-bold text-[--brand-blue] text-sm tracking-widest uppercase">Em Breve</span>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight">Novidades Digitais</h2>
+                    <p class="text-xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed">Estamos preparando algo especial para transformar a gestão ambiental</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100">
-                        <div class="bg-gradient-to-br from-blue-500 to-blue-700 h-48 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
-                            </svg>
-                        </div>
-                        <div class="p-6">
-                            <div class="mb-3">
-                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-[--brand-blue] rounded-full">Modelagem Atmosférica</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Estudo de Dispersão Atmosférica (EDA)</h3>
-                            <p class="text-slate-600 mb-4">Solução estratégica para visualizar e prever o comportamento de poluentes atmosféricos, incluindo inventário de fontes e simulação com modelos como AERMOD e WRF.</p>
-                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Inventário de fontes emissoras</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Simulação AERMOD certificada</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Dados meteorológicos WRF</span></li>
-                            </ul>
-                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
-                        </div>
+                <!-- Indicador visual animado -->
+                <div class="flex justify-center items-center gap-3 mb-8">
+                    <div class="w-3 h-3 bg-[--brand-blue] rounded-full animate-pulse"></div>
+                    <div class="w-3 h-3 bg-[--brand-green] rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+                    <div class="w-3 h-3 bg-[--brand-blue] rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 sm:py-28 bg-gradient-to-br from-slate-50 to-blue-50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-20 animated-item fade-in">
+                        <span class="font-bold text-[--brand-blue] text-sm tracking-widest uppercase mb-4 inline-block">Acompanhe o Progresso</span>
+                        <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight">Jornada de Inovação</h2>
+                        <p class="text-xl text-slate-600 max-w-2xl mx-auto font-light">O caminho até o lançamento dos nossos produtos digitais</p>
                     </div>
 
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 100ms;">
-                        <div class="bg-gradient-to-br from-green-500 to-green-700 h-48 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <div class="p-6">
-                            <div class="mb-3">
-                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-green-100 text-[--brand-green] rounded-full">Sustentabilidade</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Estudo de Gases de Efeito Estufa (GEE)</h3>
-                            <p class="text-slate-600 mb-4">Elaboração de inventário corporativo de emissões, mapeando fontes diretas e indiretas, alinhado às melhores práticas e compromissos climáticos globais.</p>
-                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Inventário corporativo completo</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Governança ambiental fortalecida</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Alinhamento a padrões globais</span></li>
-                            </ul>
-                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
-                        </div>
-                    </div>
+                    <div class="relative">
+                        <!-- Linha vertical animada com gradiente -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[--brand-green] via-[--brand-blue] to-slate-300 hidden md:block"></div>
+                        
+                        <!-- Pulso animado na linha -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[--brand-blue] rounded-full hidden md:block animate-pulse shadow-lg" style="top: 40%;"></div>
 
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 200ms;">
-                        <div class="bg-gradient-to-br from-purple-500 to-purple-700 h-48 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                            </svg>
-                        </div>
-                        <div class="p-6">
-                            <div class="mb-3">
-                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-purple-100 text-purple-700 rounded-full">Monitoramento</span>
+                        <!-- Etapa 1 - Planejamento (Concluída) -->
+                        <div class="relative mb-16 animated-item fade-in">
+                            <div class="flex flex-col md:flex-row items-center gap-8">
+                                <div class="md:w-1/2 md:text-right md:pr-12">
+                                    <div class="bg-white p-8 rounded-2xl shadow-xl border-2 border-[--brand-green] hover:shadow-2xl hover:scale-105 transition-all duration-500">
+                                        <div class="flex items-center justify-end gap-3 mb-4">
+                                            <span class="inline-block bg-green-100 text-[--brand-green] px-4 py-2 rounded-full text-sm font-bold">✓ Concluído</span>
+                                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center">
+                                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Planejamento Estratégico</h3>
+                                        <p class="text-slate-600">Mapeamento de necessidades e definição de tecnologias</p>
+                                    </div>
+                                </div>
+                                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[--brand-green] rounded-full border-4 border-white shadow-2xl z-10 pulse-ring"></div>
+                                <div class="md:w-1/2"></div>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Plano de Monitoramento da Qualidade do Ar</h3>
-                            <p class="text-slate-600 mb-4">Desenvolvimento de plano técnico para acompanhamento contínuo da qualidade do ar, com definição de parâmetros, pontos de amostragem e equipamentos adequados.</p>
-                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Rede de monitoramento eficiente</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Localização estratégica de pontos</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Especificação de métodos</span></li>
-                            </ul>
-                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
                         </div>
-                    </div>
 
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 300ms;">
-                        <div class="bg-gradient-to-br from-orange-500 to-orange-700 h-48 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                        </div>
-                        <div class="p-6">
-                            <div class="mb-3">
-                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-orange-100 text-orange-700 rounded-full">Controle Ambiental</span>
+                        <!-- Etapa 2 - Desenvolvimento (Em Andamento) -->
+                        <div class="relative mb-16 animated-item fade-in" style="transition-delay: 150ms;">
+                            <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                                <div class="md:w-1/2 md:text-left md:pl-12">
+                                    <div class="bg-white p-8 rounded-2xl shadow-xl border-2 border-[--brand-blue] hover:shadow-2xl hover:scale-105 transition-all duration-500 relative overflow-hidden">
+                                        <div class="absolute top-0 right-0 w-32 h-32 bg-[--brand-blue] opacity-5 rounded-full blur-2xl animate-pulse"></div>
+                                        <div class="flex items-center gap-3 mb-4 relative z-10">
+                                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center animate-pulse">
+                                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                                </svg>
+                                            </div>
+                                            <span class="inline-block bg-blue-100 text-[--brand-blue] px-4 py-2 rounded-full text-sm font-bold animate-pulse">⚡ Em Andamento</span>
+                                        </div>
+                                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Desenvolvimento Ativo</h3>
+                                        <p class="text-slate-600">Construção das plataformas e soluções digitais</p>
+                                    </div>
+                                </div>
+                                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[--brand-blue] rounded-full border-4 border-white shadow-2xl z-10 animate-pulse"></div>
+                                <div class="md:w-1/2"></div>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Plano de Mitigação de Material Particulado</h3>
-                            <p class="text-slate-600 mb-4">Documento técnico estruturado para organizar ações de controle de emissões de partículas, com foco em melhoria ambiental e atendimento legal.</p>
-                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Planejamento anual estruturado</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Abordagem prática direcionada</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Conformidade legal garantida</span></li>
-                            </ul>
-                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
                         </div>
-                    </div>
 
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 400ms;">
-                        <div class="bg-gradient-to-br from-red-500 to-red-700 h-48 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
-                            </svg>
-                        </div>
-                        <div class="p-6">
-                            <div class="mb-3">
-                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-red-100 text-red-700 rounded-full">Meteorologia</span>
+                        <!-- Etapa 3 - Testes (Próxima) -->
+                        <div class="relative mb-16 animated-item fade-in" style="transition-delay: 300ms;">
+                            <div class="flex flex-col md:flex-row items-center gap-8">
+                                <div class="md:w-1/2 md:text-right md:pr-12">
+                                    <div class="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-lg border-2 border-slate-200 hover:bg-white hover:shadow-xl transition-all duration-500">
+                                        <div class="flex items-center justify-end gap-3 mb-4">
+                                            <span class="inline-block bg-slate-100 text-slate-600 px-4 py-2 rounded-full text-sm font-bold">Próximo Passo</span>
+                                            <div class="w-12 h-12 bg-gradient-to-br from-slate-300 to-slate-400 rounded-full flex items-center justify-center">
+                                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Testes e Validação</h3>
+                                        <p class="text-slate-600">Garantia de qualidade e performance</p>
+                                    </div>
+                                </div>
+                                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-slate-300 rounded-full border-4 border-white shadow-lg z-10"></div>
+                                <div class="md:w-1/2"></div>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Parecer Técnico Meteorológico</h3>
-                            <p class="text-slate-600 mb-4">Análise e interpretação de dados atmosféricos para subsidiar estudos ambientais, dispersão de poluentes e avaliação de risco climático.</p>
-                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Dados observacionais</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Modelagens numéricas</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Visão abrangente e confiável</span></li>
-                            </ul>
-                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
                         </div>
-                    </div>
 
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 500ms;">
-                        <div class="bg-gradient-to-br from-teal-500 to-teal-700 h-48 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
-                            </svg>
-                        </div>
-                        <div class="p-6">
-                            <div class="mb-3">
-                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-teal-100 text-teal-700 rounded-full">Diagnóstico</span>
+                        <!-- Etapa 4 - Lançamento (Futuro) -->
+                        <div class="relative animated-item fade-in" style="transition-delay: 450ms;">
+                            <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                                <div class="md:w-1/2 md:text-left md:pl-12">
+                                    <div class="bg-white/40 backdrop-blur-sm p-8 rounded-2xl shadow-lg border-2 border-slate-200 hover:bg-white/60 transition-all duration-500 relative overflow-hidden">
+                                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-[--brand-blue] to-[--brand-green] opacity-10 rounded-full blur-3xl"></div>
+                                        <div class="flex items-center gap-3 mb-4 relative z-10">
+                                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
+                                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                                                </svg>
+                                            </div>
+                                            <span class="inline-block bg-amber-50 text-amber-700 px-4 py-2 rounded-full text-sm font-bold">2025/2026</span>
+                                        </div>
+                                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Lançamento Oficial</h3>
+                                        <p class="text-slate-600">Disponibilização ao mercado</p>
+                                    </div>
+                                </div>
+                                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-slate-200 rounded-full border-4 border-white shadow-lg z-10"></div>
+                                <div class="md:w-1/2"></div>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Diagnóstico de Qualidade do Ar e Ruído</h3>
-                            <p class="text-slate-600 mb-4">Caracterização das condições ambientais locais através de análise de dados, identificando áreas críticas e fontes de impacto.</p>
-                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Avaliação ar e ruído</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Identificação de áreas críticas</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Subsídio à gestão ambiental</span></li>
-                            </ul>
-                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 600ms;">
-                        <div class="bg-gradient-to-br from-indigo-500 to-indigo-700 h-48 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                            </svg>
-                        </div>
-                        <div class="p-6">
-                            <div class="mb-3">
-                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-indigo-100 text-indigo-700 rounded-full">Avaliação Ambiental</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Levantamento de Aspectos e Impactos (LAIA)</h3>
-                            <p class="text-slate-600 mb-4">Identificação e avaliação de aspectos ambientais e seus impactos, fundamental para sistemas de gestão ambiental e conformidade com ISO 14001.</p>
-                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Critérios técnicos e legais</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Estruturação de SGA</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Conformidade ISO 14001</span></li>
-                            </ul>
-                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 700ms;">
-                        <div class="bg-gradient-to-br from-cyan-500 to-cyan-700 h-48 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                            </svg>
-                        </div>
-                        <div class="p-6">
-                            <div class="mb-3">
-                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-cyan-100 text-cyan-700 rounded-full">Planejamento</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Estudos Estratégicos</h3>
-                            <p class="text-slate-600 mb-4">Análise integrada de cenários ambientais, operacionais e regulatórios para apoiar decisões estratégicas em projetos complexos.</p>
-                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Avaliação de riscos</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Planejamento ambiental</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Análise de viabilidade técnica</span></li>
-                            </ul>
-                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 800ms;">
-                        <div class="bg-gradient-to-br from-emerald-500 to-emerald-700 h-48 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-                            </svg>
-                        </div>
-                        <div class="p-6">
-                            <div class="mb-3">
-                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-emerald-100 text-emerald-700 rounded-full">ISO 14001</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Gestão Ambiental ISO 14001</h3>
-                            <p class="text-slate-600 mb-4">Estruturação de Sistema de Gestão Ambiental com procedimentos, auditorias internas e treinamento para conformidade e melhoria contínua.</p>
-                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Procedimentos operacionais</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Auditorias internas</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Treinamento e capacitação</span></li>
-                            </ul>
-                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card animated-item fade-in border border-slate-100" style="transition-delay: 900ms;">
-                        <div class="bg-gradient-to-br from-amber-500 to-amber-700 h-48 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
-                            </svg>
-                        </div>
-                        <div class="p-6">
-                            <div class="mb-3">
-                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-amber-100 text-amber-700 rounded-full">ISO 9001</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Gestão da Qualidade ISO 9001</h3>
-                            <p class="text-slate-600 mb-4">Estruturação de Sistema de Gestão da Qualidade com mapeamento de processos, documentação, auditorias e cultura de melhoria contínua.</p>
-                            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Mapeamento de processos</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Documentação da qualidade</span></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-[--brand-green] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span>Auditorias e treinamento</span></li>
-                            </ul>
-                            <a href="contato.html" class="inline-block w-full text-center bg-[--brand-blue] text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all">Solicitar Orçamento</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 sm:py-28 bg-slate-50">
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto text-center animated-item fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Soluções Completas em Gestão Ambiental</h2>
-                    <p class="text-lg text-slate-600 mb-8">Nossa equipe multidisciplinar está preparada para atender às necessidades específicas do seu projeto, combinando conhecimento técnico, experiência regulatória e comprometimento com a excelência. Entre em contato e descubra como podemos apoiar sua empresa.</p>
-                    <a href="contato.html" class="inline-block bg-gradient-to-r from-[--brand-blue] to-[--brand-green] text-white font-bold py-4 px-10 rounded-lg hover:scale-105 transition-transform duration-300 shadow-xl">Falar com Especialista</a>
+        <section class="py-20 sm:py-32 bg-white relative overflow-hidden">
+            <!-- Elementos decorativos animados -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute -top-20 -left-20 w-96 h-96 bg-[--brand-blue] opacity-5 rounded-full blur-3xl float-animation"></div>
+                <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-[--brand-green] opacity-5 rounded-full blur-3xl float-animation" style="animation-delay: 2s;"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="mb-12 animated-item fade-in">
+                        <div class="inline-block mb-6">
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-gradient-to-r from-[--brand-blue] to-[--brand-green] blur-2xl opacity-30 animate-pulse"></div>
+                                <svg class="w-20 h-20 relative z-10 text-[--brand-blue] float-animation" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight">Fique por Dentro</h2>
+                        <p class="text-xl md:text-2xl text-slate-600 mb-8 font-light leading-relaxed">Seja notificado quando lançarmos nossas soluções digitais</p>
+                    </div>
+
+                    <div class="animated-item fade-in" style="transition-delay: 200ms;">
+                        <div class="bg-gradient-to-br from-blue-50 via-white to-green-50 rounded-3xl p-10 md:p-16 shadow-2xl border border-blue-100 relative overflow-hidden group hover:shadow-3xl transition-all duration-500">
+                            <!-- Efeito de brilho animado -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-1000" style="transform: translateX(-100%); animation: shine 3s infinite;"></div>
+                            
+                            <div class="relative z-10">
+                                <div class="mb-8">
+                                    <div class="flex flex-wrap justify-center gap-4 mb-6">
+                                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+                                            <svg class="w-5 h-5 text-[--brand-green]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                            </svg>
+                                            <span class="text-sm font-medium text-slate-700">Acesso antecipado</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+                                            <svg class="w-5 h-5 text-[--brand-green]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                            </svg>
+                                            <span class="text-sm font-medium text-slate-700">Demonstrações exclusivas</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+                                            <svg class="w-5 h-5 text-[--brand-green]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                            </svg>
+                                            <span class="text-sm font-medium text-slate-700">Condições especiais</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="contato.html" class="inline-block group/btn">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-r from-[--brand-blue] to-[--brand-green] rounded-2xl blur-xl opacity-50 group-hover/btn:opacity-75 transition-opacity"></div>
+                                        <button class="relative bg-gradient-to-r from-[--brand-blue] to-[--brand-green] text-white font-bold text-lg px-12 py-5 rounded-2xl hover:scale-105 transition-all duration-300 shadow-2xl flex items-center gap-3">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                            </svg>
+                                            Quero Ser Notificado
+                                            <svg class="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </a>
+                                
+                                <p class="text-sm text-slate-500 mt-6">Sem compromisso • Cancele quando quiser</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+            <!-- Estrelas de fundo -->
+            <div class="absolute inset-0">
+                <div class="absolute top-10 left-10 w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                <div class="absolute top-20 right-20 w-1 h-1 bg-white rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+                <div class="absolute bottom-20 left-1/4 w-2 h-2 bg-white rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+                <div class="absolute bottom-10 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-3xl mx-auto text-center animated-item fade-in">
+                    <div class="inline-block bg-white/10 backdrop-blur-sm rounded-full p-5 mb-6 float-animation">
+                        <svg class="w-10 h-10 text-[--brand-green]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Dúvidas?</h2>
+                    <p class="text-lg md:text-xl text-slate-300 mb-8 font-light">Nossa equipe está pronta para responder suas perguntas</p>
+                    <a href="contato.html" class="inline-block bg-white text-[--brand-blue] font-bold py-4 px-10 rounded-xl hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                        Fale Conosco
+                    </a>
                 </div>
             </div>
         </section>
