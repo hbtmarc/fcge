@@ -478,13 +478,12 @@
         });
 
         // Mapa Interativo do Brasil
-        google.charts.load('current', {
-            'packages':['geochart'],
-            'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
-        });
-        google.charts.setOnLoadCallback(drawRegionsMap);
+        const mapContainer = document.getElementById('regions_div');
+        const mapEnabled = location.protocol !== 'file:' && !['localhost', '127.0.0.1'].includes(location.hostname);
 
         function drawRegionsMap() {
+            if (!mapContainer) return;
+
             var data = google.visualization.arrayToDataTable([
                 ['State', 'Atendimento'],
                 ['BR-MG', 9],
@@ -520,13 +519,36 @@
                 }
             };
 
-            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+            var chart = new google.visualization.GeoChart(mapContainer);
             chart.draw(data, options);
         }
 
+        if (mapEnabled && window.google && google.charts) {
+            google.charts.load('current', {
+                'packages':['geochart'],
+                'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+            });
+            google.charts.setOnLoadCallback(() => {
+                try {
+                    drawRegionsMap();
+                } catch (err) {
+                    console.warn('Mapa indisponivel no ambiente local', err);
+                    if (mapContainer) {
+                        mapContainer.innerHTML = '<p class="text-sm text-slate-500">Mapa indisponivel no ambiente local.</p>';
+                    }
+                }
+            });
+        } else if (mapContainer) {
+            mapContainer.innerHTML = '<p class="text-sm text-slate-500">Mapa indisponivel no ambiente local.</p>';
+        }
+
         window.addEventListener('resize', function() {
-            if (typeof drawRegionsMap === 'function') {
-                drawRegionsMap();
+            if (mapEnabled && typeof drawRegionsMap === 'function') {
+                try {
+                    drawRegionsMap();
+                } catch (err) {
+                    // ignore redraw errors in constrained environments
+                }
             }
         });
     </script>
