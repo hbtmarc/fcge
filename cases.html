@@ -725,6 +725,7 @@
 
             const detailItems = Array.from(detailSection.querySelectorAll('.case-detail'));
             const backToTop = document.getElementById('case-back-to-top');
+            const header = document.getElementById('header') || document.querySelector('header');
             if (!detailItems.length) return;
 
             const hideSection = () => detailSection.classList.add('hidden');
@@ -734,6 +735,13 @@
                 detailItems.forEach(item => item.classList.toggle('hidden', item.id !== id));
             };
 
+            const scrollToElement = (element) => {
+                if (!element) return;
+                const headerOffset = header ? header.offsetHeight + 16 : 80;
+                const top = element.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            };
+
             const handleHash = () => {
                 const hash = (location.hash || '').replace('#', '');
                 const match = detailItems.find(item => item.id === hash);
@@ -741,7 +749,11 @@
                     showSection();
                     showOnly(hash);
                     if (backToTop) backToTop.classList.remove('hidden');
-                    match.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            scrollToElement(match);
+                        });
+                    });
                 } else {
                     hideSection();
                     detailItems.forEach(item => item.classList.add('hidden'));
