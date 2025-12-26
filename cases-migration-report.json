@@ -1,0 +1,41 @@
+{
+  "totalCasesNoDocumento": 4,
+  "totalCasesGerados": 4,
+  "paginasCriadas": [],
+  "imagensCopiadas": [],
+  "camposAusentes": {
+    "modelagem-para-estudo-de-deposicao-de-particulas": [
+      "client",
+      "coverImage",
+      "galleryImages",
+      "scope",
+      "deliverables"
+    ],
+    "avaliacao-da-dispersao-atmosferica-de-particulas-geradas-por-trafego-veicular-em-vias-urbanas": [
+      "client",
+      "coverImage",
+      "galleryImages",
+      "scope",
+      "deliverables"
+    ],
+    "modelagem-para-estudo-de-dispersao-atmosferica-em-usina-termeletrica-ute": [
+      "client",
+      "coverImage",
+      "galleryImages",
+      "scope",
+      "deliverables"
+    ],
+    "modelagem-para-estudo-de-dispersao-atmosferica-em-unidade-industrial-em-processo-de-ampliacao": [
+      "client",
+      "coverImage",
+      "galleryImages",
+      "scope",
+      "deliverables"
+    ]
+  },
+  "avisos": [
+    "KPIs nao encontrados no documento.",
+    "Nenhuma imagem encontrada no documento.",
+    "Detalhes dos cases inseridos em cases.html (modo pagina unica)."
+  ]
+}
