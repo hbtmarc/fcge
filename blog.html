@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | FC Gestão Estratégica</title>
-    <meta name="description" content="Artigos, notícias e insights sobre o universo do licenciamento ambiental, dispersão atmosférica e gestão estratégica de projetos.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Blog | FC Gestão Estratégica</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         :root { --brand-blue: #0055A4; --brand-green: #6EBE44; }
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: #F8FAFC; }
         .animated-item { opacity: 0; transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
@@ -50,83 +48,76 @@
         .prose blockquote { border-left: 4px solid var(--brand-blue); padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: #475569; background: #f8fafc; padding: 1.5rem; border-radius: 0 8px 8px 0; }
         .prose strong { color: var(--brand-blue); font-weight: 700; }
     </style>
-</head>
+<meta content="Artigos, notícias e insights sobre o universo do licenciamento ambiental, dispersão atmosférica e gestão estratégica de projetos." name="description"/><link href="https://hbtmarc.github.io/fcge/blog.html" rel="canonical"/><meta content="Blog | FC Gestão Estratégica" property="og:title"/><meta content="Artigos, notícias e insights sobre o universo do licenciamento ambiental, dispersão atmosférica e gestão estratégica de projetos." property="og:description"/><meta content="https://hbtmarc.github.io/fcge/blog.html" property="og:url"/><meta content="website" property="og:type"/><meta content="https://hbtmarc.github.io/fcge/imagens/logo/logo12-1.png" property="og:image"/><meta content="FC Gestao Estrategica" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><meta content="Blog | FC Gestão Estratégica" name="twitter:title"/><meta content="Artigos, notícias e insights sobre o universo do licenciamento ambiental, dispersão atmosférica e gestão estratégica de projetos." name="twitter:description"/><meta content="https://hbtmarc.github.io/fcge/imagens/logo/logo12-1.png" name="twitter:image"/><link href="assets/icons/favicon.svg" rel="icon"/><link href="imagens/logo/logo12-1.png" rel="apple-touch-icon"/><link href="site.webmanifest" rel="manifest"/><script id="structured-data" type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "FC Gestao Estrategica", "url": "https://hbtmarc.github.io/fcge", "logo": "https://hbtmarc.github.io/fcge/imagens/logo/logo12-1.png"}, {"@type": "WebSite", "name": "FC Gestao Estrategica", "url": "https://hbtmarc.github.io/fcge"}]}</script></head>
 <body class="bg-slate-50 text-slate-700">
-
-    <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 border-b border-slate-200">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 shrink-0">
-                <img src="imagens/logo/logo12-1.png" alt="Logo FC Gestão Estratégica" class="h-14 w-auto">
-                <span class="font-bold text-xl text-slate-800 tracking-tight hidden sm:inline" style="color: var(--brand-blue);">FC Gestão Estratégica</span>
-            </a>
-            <div class="hidden md:flex items-center space-x-8 font-medium text-slate-800">
-                <a href="sobre.html" class="gradient-text-hover">Sobre</a>
-                <a href="servicos.html" class="gradient-text-hover">Serviços</a>
-                <a href="cases.html" class="gradient-text-hover">Cases</a>
-                <a href="produtosdigitais.html" class="gradient-text-hover">Produtos Digitais</a>
-                <a href="index.html#processo" class="gradient-text-hover">Nosso Processo</a>
-                <a href="blog.html" class="gradient-text-hover font-bold text-[--brand-blue]">Blog</a>
-                <a href="contato.html" class="text-white font-bold py-2 px-5 rounded-lg cta-button cta-button-standard">Contato</a>
-            </div>
-            <div class="md:hidden"><button id="mobile-menu-button" class="text-slate-800"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
-        </nav>
-        <!-- Menu Mobile -->
-        <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-sm fixed top-0 left-0 h-full w-64 z-50 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out">
-            <div class="p-6">
-                <a href="index.html" class="shrink-0 mb-8 inline-block"><img src="imagens/logo/logo12-1.png" alt="Logo FC Gestão Estratégica" class="h-12 w-auto"></a>
-                <a href="sobre.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Sobre</a>
-                <a href="servicos.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Serviços</a>
-                <a href="cases.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Cases</a>
-                <a href="produtosdigitais.html" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Produtos Digitais</a>
-                <a href="index.html#processo" class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]">Nosso Processo</a>
-                <a href="blog.html" class="block py-3 text-lg text-[--brand-blue] font-bold">Blog</a>
-                <a href="contato.html" class="block mt-4 text-lg text-white font-bold py-3 px-6 rounded-lg text-center cta-button cta-button-standard">Contato</a>
-            </div>
-            <button id="close-mobile-menu" class="absolute top-6 right-6 text-slate-700"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
-        </div>
-    </header>
-
-    <main>
-        <section class="relative page-header text-center py-24 sm:py-32" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-slate-900/60 z-0"></div>
-            <div class="relative z-10 container mx-auto px-6 animated-item fade-in">
-                <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-white">Nosso Blog</h1>
-                <p class="mt-4 text-lg text-slate-200 max-w-2xl mx-auto">Conteúdo relevante para manter você atualizado sobre as últimas tendências e regulamentações no universo da gestão ambiental e da qualidade.</p>
-            </div>
-        </section>
-
-        <section class="py-20 sm:py-28 animated-item fade-in">
-            <div class="container mx-auto px-6">
-                <div id="posts-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Os posts serão inseridos aqui dinamicamente -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Modal para exibir artigos -->
-        <div id="article-modal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close-modal" onclick="closeModal()">&times;</span>
-                    <div id="modal-header-content"></div>
-                </div>
-                <div class="modal-body">
-                    <img id="modal-image" src="" alt="" class="w-full h-auto max-h-[400px] object-cover rounded-lg shadow-lg mb-8">
-                    <div id="modal-article-content" class="prose max-w-none text-lg"></div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <footer class="bg-white border-t border-slate-200">
-        <div class="container mx-auto px-6 py-8 text-center text-slate-500">
-            <a href="index.html"><img src="imagens/logo/logo12-1.png" alt="Logo FC Gestão Estratégica" class="h-12 w-auto mx-auto mb-4"></a>
-            <p>&copy; 2025 FC Gestão Estratégica. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-    
-        <script>
+<header class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 border-b border-slate-200" id="header">
+<nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+<a class="flex items-center gap-3 shrink-0" href="index.html">
+<img alt="Logo FC Gestão Estratégica" class="h-14 w-auto" decoding="async" height="1589" loading="eager" src="imagens/logo/logo12-1.png" width="1630"/>
+<span class="font-bold text-xl text-slate-800 tracking-tight hidden sm:inline" style="color: var(--brand-blue);">FC Gestão Estratégica</span>
+</a>
+<div class="hidden md:flex items-center space-x-8 font-medium text-slate-800">
+<a class="gradient-text-hover" href="sobre.html">Sobre</a>
+<a class="gradient-text-hover" href="servicos.html">Serviços</a>
+<a class="gradient-text-hover" href="cases.html">Cases</a>
+<a class="gradient-text-hover" href="produtosdigitais.html">Produtos Digitais</a>
+<a class="gradient-text-hover" href="index.html#processo">Nosso Processo</a>
+<a class="gradient-text-hover font-bold text-[--brand-blue]" href="blog.html">Blog</a>
+<a class="text-white font-bold py-2 px-5 rounded-lg cta-button cta-button-standard" href="contato.html">Contato</a>
+</div>
+<div class="md:hidden"><button class="text-slate-800" id="mobile-menu-button"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button></div>
+</nav>
+<!-- Menu Mobile -->
+<div class="md:hidden bg-white/95 backdrop-blur-sm fixed top-0 left-0 h-full w-64 z-50 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out" id="mobile-menu">
+<div class="p-6">
+<a class="shrink-0 mb-8 inline-block" href="index.html"><img alt="Logo FC Gestão Estratégica" class="h-12 w-auto" decoding="async" height="1589" loading="eager" src="imagens/logo/logo12-1.png" width="1630"/></a>
+<a class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]" href="sobre.html">Sobre</a>
+<a class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]" href="servicos.html">Serviços</a>
+<a class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]" href="cases.html">Cases</a>
+<a class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]" href="produtosdigitais.html">Produtos Digitais</a>
+<a class="block py-3 text-lg text-slate-700 hover:text-[--brand-blue]" href="index.html#processo">Nosso Processo</a>
+<a class="block py-3 text-lg text-[--brand-blue] font-bold" href="blog.html">Blog</a>
+<a class="block mt-4 text-lg text-white font-bold py-3 px-6 rounded-lg text-center cta-button cta-button-standard" href="contato.html">Contato</a>
+</div>
+<button class="absolute top-6 right-6 text-slate-700" id="close-mobile-menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+</div>
+</header>
+<main>
+<section class="relative page-header text-center py-24 sm:py-32" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&amp;w=2070&amp;auto=format&amp;fit=crop');">
+<div class="absolute inset-0 bg-slate-900/60 z-0"></div>
+<div class="relative z-10 container mx-auto px-6 animated-item fade-in">
+<h1 class="text-4xl md:text-5xl font-black tracking-tighter text-white">Nosso Blog</h1>
+<p class="mt-4 text-lg text-slate-200 max-w-2xl mx-auto">Conteúdo relevante para manter você atualizado sobre as últimas tendências e regulamentações no universo da gestão ambiental e da qualidade.</p>
+</div>
+</section>
+<section class="py-20 sm:py-28 animated-item fade-in">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="posts-container">
+<!-- Os posts serão inseridos aqui dinamicamente -->
+</div>
+</div>
+</section>
+<!-- Modal para exibir artigos -->
+<div class="modal" id="article-modal">
+<div class="modal-content">
+<div class="modal-header">
+<span class="close-modal" onclick="closeModal()">×</span>
+<div id="modal-header-content"></div>
+</div>
+<div class="modal-body">
+<img alt="" class="w-full h-auto max-h-[400px] object-cover rounded-lg shadow-lg mb-8" decoding="async" id="modal-image" loading="eager" src=""/>
+<div class="prose max-w-none text-lg" id="modal-article-content"></div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white border-t border-slate-200">
+<div class="container mx-auto px-6 py-8 text-center text-slate-500">
+<a href="index.html"><img alt="Logo FC Gestão Estratégica" class="h-12 w-auto mx-auto mb-4" decoding="async" height="1589" loading="eager" src="imagens/logo/logo12-1.png" width="1630"/></a>
+<p>© 2025 FC Gestão Estratégica. Todos os direitos reservados.</p>
+</div>
+</footer>
+<script>
         async function loadPosts() {
             const container = document.getElementById('posts-container');
             if (!container) return;
@@ -214,6 +205,3 @@
     </script>
 </body>
 </html>
-
-
-
