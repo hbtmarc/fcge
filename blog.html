@@ -126,190 +126,73 @@
         </div>
     </footer>
     
-    <script>
-        // Dados dos artigos
-        const articles = [
-            {
-                id: 'aermod',
-                title: 'Desvendando o AERMOD: O que você precisa saber',
-                category: 'Modelagem',
-                date: '2025-09-15',
-                dateFormatted: '15 de Setembro, 2025',
-                excerpt: 'Um guia completo sobre o modelo de dispersão mais utilizado no mundo e sua importância para o licenciamento.',
-                image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop',
-                imageDetail: 'https://images.unsplash.com/photo-1534088568595-a066f410bcda?q=80&w=2069&auto=format&fit=crop',
-                content: `
-                    <p>No universo do licenciamento ambiental, poucas ferramentas são tão cruciais quanto os modelos de dispersão atmosférica. Eles são a base para prever o impacto de emissões industriais na qualidade do ar, garantindo que novos empreendimentos operem de forma segura para o meio ambiente e para a saúde pública. Entre os diversos modelos disponíveis, um se destaca como padrão global: o <strong>AERMOD</strong>.</p>
-                    
-                    <p>Desenvolvido pela Agência de Proteção Ambiental dos Estados Unidos (EPA), o AERMOD é um modelo de dispersão de estado estacionário que simula o transporte e a dispersão de poluentes emitidos por uma variedade de fontes. Sua robustez e precisão fizeram dele a escolha preferencial de agências reguladoras em todo o mundo, incluindo a CETESB em São Paulo e outros órgãos ambientais no Brasil.</p>
-
-                    <h2>Por que o AERMOD é tão importante?</h2>
-                    <p>A importância do AERMOD reside em sua capacidade de incorporar dados complexos de meteorologia e topografia para gerar previsões realistas. Ao contrário de modelos mais simples, ele considera variações na altura da camada de mistura, perfis de vento e turbulência, e o efeito do terreno na pluma de poluentes. Isso resulta em uma avaliação de impacto muito mais precisa, que é fundamental para:</p>
-                    <ul>
-                        <li><strong>Obtenção de Licenças:</strong> É um requisito obrigatório em muitos processos de licenciamento para fontes de emissão significativas.</li>
-                        <li><strong>Definição de Limites:</strong> Ajuda a determinar as taxas máximas de emissão que uma planta pode ter sem exceder os Padrões de Qualidade do Ar.</li>
-                        <li><strong>Planejamento e Otimização:</strong> Permite testar diferentes cenários, como a altura de uma chaminé ou a eficácia de equipamentos de controle, antes de sua implementação.</li>
-                    </ul>
-
-                    <blockquote>
-                        "Utilizar o AERMOD não é apenas uma exigência regulatória; é uma prática de gestão de risco inteligente, que fornece segurança técnica para decisões de investimento de alto valor."
-                    </blockquote>
-
-                    <h2>Como funciona um Estudo de Dispersão com AERMOD?</h2>
-                    <p>Um estudo típico envolve três etapas principais. Primeiro, a <strong>coleta de dados</strong>, que inclui o inventário de emissões (o que é emitido e em que quantidade), dados meteorológicos de superfície e de altitude, e informações sobre a topografia local. Em seguida, a <strong>modelagem</strong>, onde esses dados são inseridos no software AERMOD para simular a dispersão ao longo de um período, geralmente de um a cinco anos. Por fim, a <strong>análise de resultados</strong>, onde as concentrações máximas previstas são comparadas com os padrões legais para determinar a conformidade do projeto.</p>
-
-                    <p>Na FC Gestão Estratégica, nossa equipe de especialistas combina profundo conhecimento técnico com anos de experiência prática para executar estudos de dispersão atmosférica com o máximo de rigor e precisão, garantindo que seu projeto tenha a base sólida necessária para avançar com segurança e sucesso.</p>
-                `
-            },
-            {
-                id: 'cetesb',
-                title: 'Novas diretrizes da CETESB para 2025: Esteja preparado',
-                category: 'Legislação',
-                date: '2025-09-02',
-                dateFormatted: '02 de Setembro, 2025',
-                excerpt: 'Analisamos as principais mudanças na legislação ambiental de São Paulo e o que elas significam para o seu negócio.',
-                image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop',
-                imageDetail: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop',
-                content: `
-                    <p>O cenário regulatório ambiental está em constante evolução, e para as indústrias que operam no estado de São Paulo, manter-se atualizado com as diretrizes da <strong>Companhia Ambiental do Estado de São Paulo (CETESB)</strong> é mais do que uma boa prática – é uma necessidade para a continuidade dos negócios. Com a chegada de 2025, novas normativas e atualizações nos procedimentos de licenciamento estão previstas, e a preparação é a chave para evitar surpresas.</p>
-                    
-                    <p>As mudanças esperadas abrangem desde a revisão dos padrões de emissão para fontes fixas até a exigência de tecnologias mais eficientes no controle de poluição. O objetivo da CETESB é claro: alinhar o desenvolvimento industrial do estado com metas de sustentabilidade cada vez mais ambiciosas e com a melhoria contínua da qualidade do ar.</p>
-
-                    <h2>O que esperar das novas diretrizes?</h2>
-                    <p>Embora os detalhes finais ainda estejam sendo consolidados, as discussões técnicas apontam para algumas áreas principais de foco:</p>
-                    <ul>
-                        <li><strong>Revisão dos Padrões de Emissão:</strong> Espera-se que os limites para poluentes como Material Particulado (MP), Óxidos de Nitrogênio (NOx) e Dióxido de Enxofre (SO2) se tornem mais restritivos para determinados setores industriais.</li>
-                        <li><strong>Digitalização de Processos:</strong> A CETESB deve aprofundar a digitalização dos processos de licenciamento, exigindo que todos os estudos e relatórios sejam submetidos através de plataformas online, o que demanda maior organização e precisão dos dados.</li>
-                        <li><strong>Maior Ênfase em Monitoramento Contínuo:</strong> A exigência de sistemas de monitoramento contínuo de emissões (CEMS) pode ser ampliada para um número maior de fontes, demandando investimentos em tecnologia e gestão de dados.</li>
-                    </ul>
-
-                    <blockquote>
-                        "A antecipação às mudanças regulatórias é um diferencial competitivo. Empresas que se preparam com antecedência transformam o que seria um desafio de conformidade em uma oportunidade para otimizar processos e reforçar seu compromisso com a sustentabilidade."
-                    </blockquote>
-
-                    <h2>Como sua empresa pode se preparar?</h2>
-                    <p>A adaptação proativa é a melhor estratégia. Iniciar com um diagnóstico completo das operações atuais é o primeiro passo. Isso inclui a realização de um inventário de emissões atualizado e a revisão dos sistemas de controle existentes. Em seguida, é recomendável realizar simulações, utilizando ferramentas como o AERMOD, para avaliar o impacto das operações frente aos possíveis novos limites de emissão.</p>
-
-                    <p>Navegar por essas mudanças pode parecer complexo, mas com a assessoria correta, o processo se torna claro e gerenciável. A FC Gestão Estratégica está na vanguarda do acompanhamento da legislação ambiental, pronta para auxiliar sua empresa a interpretar as novas diretrizes e a desenvolver um plano de ação robusto para garantir total conformidade em 2025 e além.</p>
-                `
-            },
-            {
-                id: 'qualidade-ar',
-                title: 'A importância do Monitoramento da Qualidade do Ar',
-                category: 'Sustentabilidade',
-                date: '2025-08-21',
-                dateFormatted: '21 de Agosto, 2025',
-                excerpt: 'Além da conformidade legal, o monitoramento contínuo é uma ferramenta estratégica para a saúde e sustentabilidade.',
-                image: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?q=80&w=2070&auto=format&fit=crop',
-                imageDetail: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop',
-                content: `
-                    <p>Muitas vezes visto apenas como uma obrigação dentro do processo de licenciamento ambiental, o <strong>Monitoramento da Qualidade do Ar (PMQAr)</strong> é, na verdade, uma ferramenta estratégica com implicações profundas para a saúde pública, a reputação corporativa e a sustentabilidade a longo prazo de qualquer empreendimento. Ir além do básico e entender o seu verdadeiro valor pode transformar a maneira como uma empresa encara suas responsabilidades ambientais.</p>
-                    
-                    <p>O ar que respiramos é um recurso compartilhado e vital. A poluição atmosférica é um dos maiores riscos ambientais para a saúde humana, associada a uma série de doenças respiratórias e cardiovasculares. Para as indústrias, monitorar o que emitem não é apenas sobre seguir regras; é sobre ser um bom vizinho e um ator responsável na comunidade onde opera.</p>
-
-                    <h2>Mais do que dados: inteligência para a gestão</h2>
-                    <p>Um Plano de Monitoramento da Qualidade do Ar bem estruturado fornece dados contínuos e confiáveis sobre as concentrações de poluentes na área de influência de um projeto. Essa informação é valiosa e vai muito além de simplesmente preencher relatórios para os órgãos ambientais. Com esses dados, uma empresa pode:</p>
-                    <ul>
-                        <li><strong>Verificar a eficácia de sistemas de controle:</strong> O monitoramento comprova se os investimentos em filtros e outras tecnologias de abatimento estão realmente funcionando como esperado.</li>
-                        <li><strong>Identificar problemas operacionais:</strong> Picos inesperados nas concentrações de poluentes podem indicar falhas em processos ou equipamentos, permitindo uma manutenção proativa.</li>
-                        <li><strong>Otimizar a produção:</strong> Em alguns casos, os dados podem ajudar a correlacionar certas condições operacionais com maiores emissões, abrindo caminho para otimizações que reduzem tanto a poluição quanto os custos.</li>
-                        <li><strong>Fortalecer o relacionamento com a comunidade:</strong> A transparência na divulgação dos dados de qualidade do ar pode construir confiança e demonstrar um compromisso genuíno com o bem-estar local.</li>
-                    </ul>
-
-                    <blockquote>
-                        "O monitoramento da qualidade do ar transforma o abstrato em concreto. Ele nos dá um retrato fiel do nosso impacto e a inteligência necessária para gerenciá-lo de forma eficaz e responsável."
-                    </blockquote>
-
-                    <h2>Construindo um futuro mais limpo</h2>
-                    <p>Implementar um PMQAr não precisa ser um processo oneroso ou complicado. Com o parceiro certo, é possível desenhar um plano que seja ao mesmo tempo robusto cientificamente e adequado à realidade operacional da empresa. Desde a escolha dos equipamentos e locais de amostragem até a análise e interpretação dos dados, cada passo é crucial para garantir que o programa gere valor.</p>
-
-                    <p>Investir no monitoramento da qualidade do ar é investir no futuro. É uma demonstração de que a empresa não apenas cumpre a lei, mas também lidera pelo exemplo, pavimentando o caminho para um desenvolvimento industrial que seja verdadeiramente sustentável.</p>
-                `
-            }
-        ];
-
-        // Ordenar artigos por data (mais recentes primeiro)
-        articles.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-        // Função para renderizar posts
-        function renderPosts() {
+        <script>
+        async function loadPosts() {
             const container = document.getElementById('posts-container');
-            container.innerHTML = '';
-            
-            articles.forEach(article => {
-                const postCard = document.createElement('div');
-                postCard.className = 'post-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer';
-                postCard.onclick = () => openModal(article.id);
-                
-                postCard.innerHTML = `
-                    <img src="${article.image}" alt="${article.title}" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <p class="text-sm text-slate-500">${article.category} • ${article.dateFormatted}</p>
-                        <h3 class="mt-2 text-xl font-bold text-slate-900">${article.title}</h3>
-                        <p class="mt-2 text-slate-600">${article.excerpt}</p>
-                    </div>
-                `;
-                
-                container.appendChild(postCard);
-            });
-        }
+            if (!container) return;
 
-        // Função para abrir modal
-        function openModal(articleId) {
-            const article = articles.find(a => a.id === articleId);
-            if (!article) return;
-            
-            const modal = document.getElementById('article-modal');
-            const headerContent = document.getElementById('modal-header-content');
-            const modalImage = document.getElementById('modal-image');
-            const articleContent = document.getElementById('modal-article-content');
-            
-            headerContent.innerHTML = `
-                <h1 class="text-3xl md:text-4xl font-black text-white mb-2 pr-12">${article.title}</h1>
-                <p class="text-white/90">Publicado em ${article.dateFormatted} • Categoria: ${article.category}</p>
-            `;
-            
-            modalImage.src = article.imageDetail;
-            modalImage.alt = article.title;
-            articleContent.innerHTML = article.content;
-            
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+            try {
+                const response = await fetch('data/posts.json', { cache: 'no-store' });
+                if (!response.ok) throw new Error(`Falha ao carregar posts (${response.status})`);
+                const posts = await response.json();
 
-        // Função para fechar modal
-        function closeModal() {
-            const modal = document.getElementById('article-modal');
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
+                posts.sort((a, b) => new Date(b.dateISO) - new Date(a.dateISO));
+                container.innerHTML = '';
 
-        // Fechar modal ao clicar fora
-        window.onclick = function(event) {
-            const modal = document.getElementById('article-modal');
-            if (event.target === modal) {
-                closeModal();
+                posts.forEach((post) => {
+                    const card = document.createElement('a');
+                    card.href = post.localUrl;
+                    card.className = 'post-card bg-white rounded-lg shadow-md overflow-hidden transition hover:shadow-xl';
+
+                    if (post.coverImagePath) {
+                        const img = document.createElement('img');
+                        img.src = post.coverImagePath;
+                        img.alt = post.title;
+                        img.className = 'w-full h-48 object-cover';
+                        card.appendChild(img);
+                    } else {
+                        const placeholder = document.createElement('div');
+                        placeholder.className = 'w-full h-48 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200';
+                        card.appendChild(placeholder);
+                    }
+
+                    const body = document.createElement('div');
+                    body.className = 'p-6';
+
+                    const meta = document.createElement('p');
+                    meta.className = 'text-sm text-slate-500';
+                    meta.textContent = `${post.category} • ${post.dateHumanPTBR}`;
+
+                    const title = document.createElement('h3');
+                    title.className = 'mt-2 text-xl font-bold text-slate-900';
+                    title.textContent = post.title;
+
+                    const excerpt = document.createElement('p');
+                    excerpt.className = 'mt-2 text-slate-600';
+                    excerpt.textContent = post.excerpt;
+
+                    body.appendChild(meta);
+                    body.appendChild(title);
+                    body.appendChild(excerpt);
+                    card.appendChild(body);
+                    container.appendChild(card);
+                });
+            } catch (err) {
+                console.error(err);
+                container.innerHTML = '<p class="text-center text-slate-500">Não foi possível carregar os artigos no momento.</p>';
             }
         }
 
-        // Fechar modal com ESC
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeModal();
-            }
-        });
-
-        // Renderizar posts ao carregar a página
         document.addEventListener("DOMContentLoaded", () => {
-            renderPosts();
-            
+            loadPosts();
+
             const animationObserver = new IntersectionObserver(entries => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
                     }
                 });
-            }, { 
+            }, {
                 threshold: 0.15,
                 rootMargin: "0px 0px -50px 0px"
             });
@@ -321,7 +204,7 @@
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const closeMobileMenuButton = document.getElementById('close-mobile-menu');
             const mobileMenu = document.getElementById('mobile-menu');
-            
+
             const openMenu = () => mobileMenu.classList.remove('-translate-x-full');
             const closeMenu = () => mobileMenu.classList.add('-translate-x-full');
 
