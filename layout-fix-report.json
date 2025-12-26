@@ -1,8 +1,0 @@
-{
-  "totalArticles": 16,
-  "fixedOK": 16,
-  "skipped": [],
-  "missingCSSAfterFix": [],
-  "brokenAssetPathsSuspected": [],
-  "templateUsed": "blog.html"
-}
