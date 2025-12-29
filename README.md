@@ -35,9 +35,9 @@
 
 <h3 style="margin-top: 2rem;">Artigos Recentes:</h3>
 <p>
-<a href="https://hbtmarc.github.io/fcge/artigo-aermod.html" style="margin: 0 10px;">Desvendando o AERMOD</a> |
-<a href="https://hbtmarc.github.io/fcge/artigo-cetesb.html" style="margin: 0 10px;">Novas diretrizes da CETESB</a> |
-<a href="https://hbtmarc.github.io/fcge/artigo-qualidade-ar.html" style="margin: 0 10px;">A importância do Monitoramento</a>
+<a href="blog.html#post-aermod" style="margin: 0 10px;">Desvendando o AERMOD</a> |
+<a href="blog.html#post-cetesb" style="margin: 0 10px;">Novas diretrizes da CETESB</a> |
+<a href="blog.html#post-qualidade-ar" style="margin: 0 10px;">A importância do Monitoramento</a>
 </p>
 </div>
 <br>
@@ -102,9 +102,9 @@ A escolha tecnológica priorizou a performance, simplicidade e as melhores ferra
 |-- sobre.html                    <em>(Página institucional da empresa)</em>
 |-- contato.html                  <em>(Página de contato com formulário)</em>
 |-- blog.html                     <em>(Página agregadora para os posts do blog)</em>
-|-- artigo-aermod.html            <em>(Página do artigo sobre AERMOD)</em>
-|-- artigo-cetesb.html            <em>(Página do artigo sobre CETESB)</em>
-|-- artigo-qualidade-ar.html      <em>(Página do artigo sobre Qualidade do Ar)</em>
+|-- blog.html#post-aermod            <em>(Página do artigo sobre AERMOD)</em>
+|-- blog.html#post-cetesb            <em>(Página do artigo sobre CETESB)</em>
+|-- blog.html#post-qualidade-ar      <em>(Página do artigo sobre Qualidade do Ar)</em>
 |-- sitemap.xml                   <em>(Mapa do site para os buscadores)</em>
 |-- robots.txt                    <em>(Diretrizes para os robôs de busca)</em>
 |-- README.md                     <em>(Esta documentação)</em>
