@@ -448,7 +448,7 @@
 <div class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 opacity-0" id="video-modal">
 <div class="relative bg-black w-full max-w-4xl aspect-video rounded-lg shadow-2xl transform scale-95 transition-all duration-300">
 <button class="absolute -top-3 -right-3 w-10 h-10 bg-white rounded-full text-slate-800 flex items-center justify-center text-2xl z-10" id="close-video-modal">×</button>
-<iframe allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" class="w-full h-full rounded-lg" frameborder="0" id="video-iframe" src=""></iframe>
+<iframe allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen="" class="w-full h-full rounded-lg" frameborder="0" id="video-iframe" referrerpolicy="strict-origin-when-cross-origin" src="" title="FCGE"></iframe>
 </div>
 </div>
 <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript"></script>
@@ -519,7 +519,7 @@
             const videoModal = document.getElementById('video-modal');
             const closeVideoModal = document.getElementById('close-video-modal');
             const videoIframe = document.getElementById('video-iframe');
-            const videoUrl = "https://drive.google.com/file/d/1zJxapD9tIIQEOy-wf-8ORy11w03WLUuj/preview?autoplay=1";
+            const videoUrl = "https://player.vimeo.com/video/1157379603?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1";
 
             const openModal = () => {
                 videoIframe.src = videoUrl;
