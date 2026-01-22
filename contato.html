@@ -74,7 +74,11 @@
 <div class="mt-16 sm:mt-20 bg-white border border-slate-200 rounded-2xl overflow-hidden grid md:grid-cols-5 shadow-xl">
 <div class="md:col-span-3 p-8 md:p-12">
 <h2 class="text-2xl font-bold text-slate-800">Envie sua mensagem</h2>
-<form action="#" class="mt-8 space-y-6" method="POST">
+<form action="https://formsubmit.co/comercial@fcgestaoestrategica.com.br" class="mt-8 space-y-6" method="POST">
+<input name="_subject" type="hidden" value="Novo contato pelo site"/>
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_next" type="hidden" value="https://hbtmarc.github.io/fcge/contato.html?enviado=1"/>
 <div>
 <label class="sr-only" for="name">Nome</label>
 <input class="block w-full rounded-md border-gray-300 shadow-sm focus:border-[--brand-blue] focus:ring-[--brand-blue] p-3" id="name" name="name" placeholder="Seu nome" required="" type="text"/>
@@ -107,6 +111,17 @@
 </div>
 </section>
 </main>
+<div aria-live="polite" class="fixed top-6 right-6 z-50 hidden" id="toast-success" role="status">
+<div class="flex items-start gap-3 rounded-xl bg-white border border-slate-200 shadow-xl px-5 py-4">
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-emerald-100 text-emerald-600">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<div>
+<p class="font-semibold text-slate-900">Mensagem enviada</p>
+<p class="text-slate-600">Recebemos seu contato. Em breve responderemos.</p>
+</div>
+</div>
+</div>
 <footer class="bg-white border-t border-slate-200">
 <div class="container mx-auto px-6 py-8 text-center text-slate-500">
 <a href="index.html"><img alt="Logo FC Gestão Estratégica" class="h-12 w-auto mx-auto mb-4" decoding="async" height="1589" loading="eager" src="imagens/logo/logo12-1.png" width="1630"/></a>
@@ -139,6 +154,17 @@
 
             if(mobileMenuButton) mobileMenuButton.addEventListener('click', openMenu);
             if(closeMobileMenuButton) closeMobileMenuButton.addEventListener('click', closeMenu);
+
+            const toast = document.getElementById('toast-success');
+            const urlParams = new URLSearchParams(window.location.search);
+            if (toast && urlParams.get('enviado') === '1') {
+                toast.classList.remove('hidden');
+                const newUrl = window.location.pathname;
+                window.history.replaceState({}, document.title, newUrl);
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 5000);
+            }
         });
     </script>
 </body>
