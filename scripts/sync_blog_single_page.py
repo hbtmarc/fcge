@@ -675,7 +675,7 @@ def render_reader_section(posts: list[dict[str, Any]], site_url: str) -> str:
 
 def get_site_url() -> str:
     if not BLOG_HTML_PATH.exists():
-        return "https://hbtmarc.github.io/fcge"
+        return "https://fcgestaoestrategica.com.br"
     html_text = BLOG_HTML_PATH.read_text(encoding="utf-8", errors="ignore")
     match = re.search(
         r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)["\']',
@@ -686,7 +686,7 @@ def get_site_url() -> str:
         href = match.group(1).rstrip("/")
         if href.endswith("/blog.html"):
             return href[: -len("/blog.html")]
-    return "https://hbtmarc.github.io/fcge"
+    return "https://fcgestaoestrategica.com.br"
 
 
 def ensure_hidden_style(html_text: str) -> str:

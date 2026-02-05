@@ -1,0 +1,46 @@
+RewriteEngine On
+
+# Redirecionar para HTTPS + domínio preferencial (sem www)
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.fcgestaoestrategica\.com\.br$ [NC]
+RewriteRule ^ https://fcgestaoestrategica.com.br%{REQUEST_URI} [L,R=301]
+
+# Páginas de erro
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# Segurança básica
+Options -Indexes
+AddDefaultCharset UTF-8
+
+<IfModule mod_headers.c>
+	Header always set X-Content-Type-Options "nosniff"
+	Header always set X-Frame-Options "SAMEORIGIN"
+	Header always set Referrer-Policy "strict-origin-when-cross-origin"
+	Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+	Header always set Strict-Transport-Security "max-age=31536000"
+</IfModule>
+
+# Cache de arquivos estáticos
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType image/avif "access plus 1 year"
+	ExpiresByType image/webp "access plus 1 year"
+	ExpiresByType image/png "access plus 1 year"
+	ExpiresByType image/jpeg "access plus 1 year"
+	ExpiresByType image/gif "access plus 1 year"
+	ExpiresByType image/svg+xml "access plus 1 year"
+	ExpiresByType text/css "access plus 1 month"
+	ExpiresByType text/javascript "access plus 1 month"
+	ExpiresByType application/javascript "access plus 1 month"
+	ExpiresByType application/font-woff "access plus 1 year"
+	ExpiresByType application/font-woff2 "access plus 1 year"
+	ExpiresByType font/woff "access plus 1 year"
+	ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Compressão
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css
+	AddOutputFilterByType DEFLATE text/javascript application/javascript application/json
+</IfModule>
