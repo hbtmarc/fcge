@@ -1,8 +1,10 @@
 RewriteEngine On
 
 # Redirecionar para HTTPS + domínio preferencial (sem www)
-RewriteCond %{HTTPS} !=on [OR]
-RewriteCond %{HTTP_HOST} ^www\.fcgestaoestrategica\.com\.br$ [NC]
+# Evita loop em ambientes com proxy/CDN
+RewriteCond %{HTTP_HOST} ^www\.fcgestaoestrategica\.com\.br$ [NC,OR]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
 RewriteRule ^ https://fcgestaoestrategica.com.br%{REQUEST_URI} [L,R=301]
 
 # Páginas de erro
