@@ -48,9 +48,14 @@ AddDefaultCharset UTF-8
 </IfModule>
 
 # URLs sem .html
-RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
+RewriteCond %{REQUEST_URI} !^/home/
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
 RewriteRule ^ %1 [L,R=301]
 
+# /index -> /
+RewriteRule ^index$ / [L,R=301]
+
+RewriteCond %{REQUEST_URI} !^/home/
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
