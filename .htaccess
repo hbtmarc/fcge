@@ -46,3 +46,12 @@ AddDefaultCharset UTF-8
 	AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css
 	AddOutputFilterByType DEFLATE text/javascript application/javascript application/json
 </IfModule>
+
+# URLs sem .html
+RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
+RewriteRule ^ %1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
